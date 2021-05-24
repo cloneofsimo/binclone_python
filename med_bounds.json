@@ -1,0 +1,1 @@
+{"text": 2, ".section": 2, ".linkonce": 1, "discard": 1, ".globl": 1, "VAL": 28, ".def": 1, ".scl": 1, "2": 1, ".type": 1, "32": 1, ".endef": 1, "push": 2, "REGIdxPtr": 3, "mov": 15, "REGSEGp": 4, "REGGEN": 16, "DWORD": 11, "PTR": 11, "MEM": 12, "ret": 1, ".align": 1, "sub": 2, "leave": 1, "call": 3}
