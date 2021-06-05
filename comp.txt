@@ -1,1 +1,8 @@
 g++ -S a.c -o a.s -masm=intel -fno-asynchronous-unwind-tables -fno-dwarf2-cfi-asm
+
+To make to obj
+
+exptrtest.o: exprtest.cpp
+    g++ -Wall -g -c exprtest.cpp -o exptrtest.o
+
+to use objdump (g++) c:\MinGW\bin\objdump.exe -d -M intel -S a.o a.obj
