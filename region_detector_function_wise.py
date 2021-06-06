@@ -133,13 +133,12 @@ def finding_matchings(query_asm_fp, region_window = 60, inexact = True):
     if inexact:
         alls["bin_vec"] = alls["bin_vec"] ^ hashval
         for idx in range(len(alls)):
-            alls['bin_vec'].iloc[idx]= bin(alls['bin_vec'].iloc[idx].astype(int)).count('1') / 20
+            alls['bin_vec'].iloc[idx]= bin(alls['bin_vec'].iloc[idx].astype(int)).count('1') / 18
         print(alls[["filepath", "idx", 'bin_vec']].values)
 
     
 
 if __name__ == '__main__':
-    #assign_median_boundary(['malware.txt'])
-    #create_features_per_window(['malware.txt'])
-
+    assign_median_boundary(['malware.txt'])
+    create_features_per_window(['malware.txt'])
     finding_matchings('query.S')
