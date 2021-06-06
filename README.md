@@ -1,10 +1,10 @@
-**# Binclone python**
+# Binclone python
 
-Original implementation in c++ can be found [here](https://github.com/BinSigma/BinClone).
+Original implementation by the authors in c++ can be found [here](https://github.com/BinSigma/BinClone).
 
 Paper for this code can be found [here](https://ieeexplore.ieee.org/document/6895418).
 
-**# How to use**
+# How to use
 
 Put the query asm file in `query.S` in the following format
 
