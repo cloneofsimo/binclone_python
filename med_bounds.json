@@ -1,1 +1,1 @@
-{"xor": 1.0, "REGGEN": 27.0, "byte": 20.0, "cmp": 3.0, "DWORD": 17.0, "PTR": 18.0, "MEM": 18.0, "push": 11.0, "REGSEGi": 6.0, "mov": 14.0, "pop": 3.0, "ret": 1.0, "je": 2.0, "tREGSEGt": 2.0, "REGSEG": 2.0, "jmp": 1.0, "jne": 2.0, "call": 6.0, "REGIdxPtr": 5.0, "REGSEGp": 1.0, "lea": 1.0, "add": 1.0}
+{"xor": 1.0, "REGGEN": 28.0, "byte": 20.0, "cmp": 3.0, "MEM": 18.0, "push": 11.0, "REGIdxPtr": 13.0, "mov": 14.0, "pop": 3.0, "ret": 1.0, "je": 2.0, "test": 2.0, "jmp": 1.0, "jne": 2.0, "call": 6.0, "lea": 1.0, "add": 1.0}

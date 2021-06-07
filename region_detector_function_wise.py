@@ -48,7 +48,7 @@ def assign_median_boundary(asm_files, region_window=60):
     json.dump(median_bounds, open("med_bounds.json", "w"))
 
 
-def create_features_per_window(asm_files, region_window=60, SBSize=18):
+def create_features_per_window(asm_files, region_window=60, SBSize=10):
 
     features_imp = json.load(open("med_bounds.json"))
     print(len(features_imp))
@@ -94,7 +94,7 @@ def create_features_per_window(asm_files, region_window=60, SBSize=18):
     df.to_csv("db")
 
 
-def load_feature(asm_lines, SBSize=18):
+def load_feature(asm_lines, SBSize=10):
     features_imp = json.load(open("med_bounds.json"))
     _asm = []
     for line in asm_lines:

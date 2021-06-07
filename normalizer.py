@@ -8,32 +8,34 @@ def normalizer(filepath):
     """
     asm_source = open(filepath, "r").read().split("\n")
 
-    norm_groups = json.load(open('norm.json'))
+    norm_groups = json.load(open("norm.json"))
     print(norm_groups.items())
     asms = []
     for line in asm_source[:-1]:
         line = line.replace("\t", " ").strip().split(" ")
         new_lis = []
         for item in line:
-            if item[0] == '_' or item[0] == 'L' or item.isdigit():
-                item = 'VAL'
-            if item[0] == '[':
-                item = 'MEM'
-            if item[:5] == '.text':
-                item = 'text'
-            if item[:2] == '0x':
-                item = 'byte'
+            if item[0] == "_" or item[0] == "L" or item.isdigit():
+                item = "VAL"
+            if item[0] == "[":
+                item = "MEM"
+            if item[:5] == ".text":
+                item = "text"
+            if item[:2] == "0x":
+                item = "byte"
             if item[0] == '"':
-                item = 'char'
+                item = "char"
             for k, v in norm_groups.items():
                 for _v in v:
                     item = item.replace(_v, k)
             new_lis.append(item)
         asms.append(new_lis)
-    
+
     return asms
 
+
 import codecs
+
 
 def normalizer_obj_dump(filepath):
     """
@@ -50,56 +52,61 @@ def normalizer_obj_dump(filepath):
 
     ## Open with codec utf-8
 
-    asm_source = open(filepath, "r", encoding = 'utf-8').read().split("\n")
+    asm_source = open(filepath, "r", encoding="utf-8").read().split("\n")
 
-    norm_groups = json.load(open('norm.json'))
-    #print(norm_groups.items())
-   
+    norm_groups = json.load(open("norm.json"))
+    # print(norm_groups.items())
+
     functions = []
     cur_func = []
     func_names = []
-    #print(asm_source)
+    # print(asm_source)
     for line in asm_source[6:-1]:
-        splts = line.split(' ')
-        #print(line)
+        splts = line.split(" ")
+        # print(line)
 
         if len(line) < 3:
             continue
 
-        if line[0] != ' ':
+        if line[0] != " ":
             functions.append(cur_func)
-            #print(cur_func)
-            #print(line)
+            # print(cur_func)
+            # print(line)
             cur_func = []
             func_names.append(splts[1][:-1])
             continue
 
         new_lis = []
-        splts = line.split(':')
-        line = splts[1][23:]
-        line = line.replace(',', ' ').split()
-        #print(line)
+        splts = line.split(":")
+        line = ":".join(splts[1:])[23:]
+        line = line.replace("DWORD", "").replace("PTR", "")
+
+        line = line.replace(",", " ").split()
+        # print(line)
         for item in line:
-            if item[0] == '_' or item[0] == 'L' or item.isdigit():
-                item = 'VAL'
-            if item[0] == '[':
-                item = 'MEM'
-            if item[:5] == '.text':
-                item = 'text'
-            if item[:2] == '0x':
-                item = 'byte'
+            if item[0] == "_" or item[0] == "L" or item.isdigit():
+                item = "VAL"
+            if item[0] == "[":
+                item = "MEM"
+            if item[:5] == ".text":
+                item = "text"
+            if item[:2] == "0x":
+                item = "byte"
             if item[0] == '"':
-                item = 'char'
+                item = "char"
             for k, v in norm_groups.items():
                 for _v in v:
-                    item = item.replace(_v, k)
+                    if _v == item:
+                        item = k
+                    # item = item.replace(_v, k)
             new_lis.append(item)
         cur_func.append(new_lis)
 
     functions.append(cur_func)
     return functions[1:], func_names
 
+
 if __name__ == "__main__":
     func, func_names = normalizer_obj_dump("malware.txt")
     print(func_names)
-    #print(func)
+    # print(func)
