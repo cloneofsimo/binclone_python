@@ -94,6 +94,9 @@ def normalizer_obj_dump(filepath):
                 item = "byte"
             if item[0] == '"':
                 item = "char"
+            if item[:2] in norm_groups["REGSEG"]:
+                item = "REGSEG"
+
             for k, v in norm_groups.items():
                 for _v in v:
                     if _v == item:
