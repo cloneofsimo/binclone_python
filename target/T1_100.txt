@@ -1,0 +1,47 @@
+  401a00:	55                   	push   rbp
+  401a01:	48 89 e5             	mov    rbp,rsp
+  401a04:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  401a08:	48 89 75 f0          	mov    QWORD PTR [rbp-0x10],rsi
+  401a0c:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+  401a10:	48 8b 75 f8          	mov    rsi,QWORD PTR [rbp-0x8]
+  401a14:	48 99                	cqo
+  401a16:	48 f7 be 70 02 00 00 	idiv   QWORD PTR [rsi+0x270]
+  401a1d:	48 89 55 e0          	mov    QWORD PTR [rbp-0x20],rdx
+  401a21:	48 8b 55 e0          	mov    rdx,QWORD PTR [rbp-0x20]
+  401a25:	48 8b 75 f8          	mov    rsi,QWORD PTR [rbp-0x8]
+  401a29:	48 3b 96 78 02 00 00 	cmp    rdx,QWORD PTR [rsi+0x278]
+  401a30:	0f 8e 59 00 00 00    	jle    401a8f <exit@plt+0x95f>
+  401a36:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+  401a3a:	48 8b 4d f8          	mov    rcx,QWORD PTR [rbp-0x8]
+  401a3e:	48 99                	cqo
+  401a40:	48 f7 b9 70 02 00 00 	idiv   QWORD PTR [rcx+0x270]
+  401a47:	48 8b 4d f8          	mov    rcx,QWORD PTR [rbp-0x8]
+  401a4b:	48 8b 89 78 02 00 00 	mov    rcx,QWORD PTR [rcx+0x278]
+  401a52:	48 8b 75 f8          	mov    rsi,QWORD PTR [rbp-0x8]
+  401a56:	48 0f af 8e 80 02 00 	imul   rcx,QWORD PTR [rsi+0x280]
+  401a5d:	00
+  401a5e:	48 8b 75 e0          	mov    rsi,QWORD PTR [rbp-0x20]
+  401a62:	48 8b 7d f8          	mov    rdi,QWORD PTR [rbp-0x8]
+  401a66:	48 2b b7 78 02 00 00 	sub    rsi,QWORD PTR [rdi+0x278]
+  401a6d:	48 8b 7d f8          	mov    rdi,QWORD PTR [rbp-0x8]
+  401a71:	48 8b bf 80 02 00 00 	mov    rdi,QWORD PTR [rdi+0x280]
+  401a78:	48 83 ef 01          	sub    rdi,0x1
+  401a7c:	48 0f af f7          	imul   rsi,rdi
+  401a80:	48 01 f1             	add    rcx,rsi
+  401a83:	48 01 c8             	add    rax,rcx
+  401a86:	48 89 45 e8          	mov    QWORD PTR [rbp-0x18],rax
+  401a8a:	e9 28 00 00 00       	jmp    401ab7 <exit@plt+0x987>
+  401a8f:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+  401a93:	48 8b 4d f8          	mov    rcx,QWORD PTR [rbp-0x8]
+  401a97:	48 99                	cqo
+  401a99:	48 f7 b9 70 02 00 00 	idiv   QWORD PTR [rcx+0x270]
+  401aa0:	48 8b 4d e0          	mov    rcx,QWORD PTR [rbp-0x20]
+  401aa4:	48 8b 75 f8          	mov    rsi,QWORD PTR [rbp-0x8]
+  401aa8:	48 0f af 8e 80 02 00 	imul   rcx,QWORD PTR [rsi+0x280]
+  401aaf:	00
+  401ab0:	48 01 c8             	add    rax,rcx
+  401ab3:	48 89 45 e8          	mov    QWORD PTR [rbp-0x18],rax
+  401ab7:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  401abb:	5d                   	pop    rbp
+  401abc:	c3                   	ret
+  401abd:	0f 1f 00             	nop    DWORD PTR [rax]

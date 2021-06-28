@@ -1,0 +1,88 @@
+  401510:	55                   	push   rbp
+  401511:	41 57                	push   r15
+  401513:	41 56                	push   r14
+  401515:	41 55                	push   r13
+  401517:	41 54                	push   r12
+  401519:	53                   	push   rbx
+  40151a:	50                   	push   rax
+  40151b:	41 89 f7             	mov    r15d,esi
+  40151e:	41 89 f5             	mov    r13d,esi
+  401521:	41 83 e5 07          	and    r13d,0x7
+  401525:	89 f0                	mov    eax,esi
+  401527:	4c 63 e6             	movsxd r12,esi
+  40152a:	4a 8b 0c e5 10 57 41 	mov    rcx,QWORD PTR [r12*8+0x415710]
+  401531:	00
+  401532:	48 23 8f 30 01 00 00 	and    rcx,QWORD PTR [rdi+0x130]
+  401539:	48 8b 97 38 01 00 00 	mov    rdx,QWORD PTR [rdi+0x138]
+  401540:	4a 8b 34 e5 10 55 41 	mov    rsi,QWORD PTR [r12*8+0x415510]
+  401547:	00
+  401548:	48 23 b7 28 01 00 00 	and    rsi,QWORD PTR [rdi+0x128]
+  40154f:	48 0b 97 40 01 00 00 	or     rdx,QWORD PTR [rdi+0x140]
+  401556:	4a 23 14 e5 10 51 41 	and    rdx,QWORD PTR [r12*8+0x415110]
+  40155d:	00
+  40155e:	48 09 ce             	or     rsi,rcx
+  401561:	48 8b 9f 48 01 00 00 	mov    rbx,QWORD PTR [rdi+0x148]
+  401568:	48 0b 9f 50 01 00 00 	or     rbx,QWORD PTR [rdi+0x150]
+  40156f:	4a 23 1c e5 10 53 41 	and    rbx,QWORD PTR [r12*8+0x415310]
+  401576:	00
+  401577:	48 09 d3             	or     rbx,rdx
+  40157a:	48 8b af 68 01 00 00 	mov    rbp,QWORD PTR [rdi+0x168]
+  401581:	48 0b af 70 01 00 00 	or     rbp,QWORD PTR [rdi+0x170]
+  401588:	4c 8b b7 60 01 00 00 	mov    r14,QWORD PTR [rdi+0x160]
+  40158f:	49 09 ee             	or     r14,rbp
+  401592:	4c 0b b7 58 01 00 00 	or     r14,QWORD PTR [rdi+0x158]
+  401599:	48 0b af 80 01 00 00 	or     rbp,QWORD PTR [rdi+0x180]
+  4015a0:	c1 f8 03             	sar    eax,0x3
+  4015a3:	48 0b af 78 01 00 00 	or     rbp,QWORD PTR [rdi+0x178]
+  4015aa:	48 8b bf 08 01 00 00 	mov    rdi,QWORD PTR [rdi+0x108]
+  4015b1:	48 09 f3             	or     rbx,rsi
+  4015b4:	48 98                	cdqe
+  4015b6:	4c 85 34 c5 50 87 41 	test   QWORD PTR [rax*8+0x418750],r14
+  4015bd:	00
+  4015be:	48 89 3c 24          	mov    QWORD PTR [rsp],rdi
+  4015c2:	74 0e                	je     4015d2 <strcat@plt+0x432>
+  4015c4:	44 89 fe             	mov    esi,r15d
+  4015c7:	e8 84 0f 00 00       	call   402550 <strcat@plt+0x13b0>
+  4015cc:	4c 21 f0             	and    rax,r14
+  4015cf:	48 09 c3             	or     rbx,rax
+  4015d2:	44 89 e8             	mov    eax,r13d
+  4015d5:	4c 85 34 c5 10 87 41 	test   QWORD PTR [rax*8+0x418710],r14
+  4015dc:	00
+  4015dd:	74 5d                	je     40163c <strcat@plt+0x49c>
+  4015df:	4c 8b 2c 24          	mov    r13,QWORD PTR [rsp]
+  4015e3:	4c 89 ef             	mov    rdi,r13
+  4015e6:	44 89 fe             	mov    esi,r15d
+  4015e9:	e8 82 0f 00 00       	call   402570 <strcat@plt+0x13d0>
+  4015ee:	4c 21 f0             	and    rax,r14
+  4015f1:	48 09 c3             	or     rbx,rax
+  4015f4:	4a 85 2c e5 10 83 41 	test   QWORD PTR [r12*8+0x418310],rbp
+  4015fb:	00
+  4015fc:	74 11                	je     40160f <strcat@plt+0x46f>
+  4015fe:	4c 89 ef             	mov    rdi,r13
+  401601:	44 89 fe             	mov    esi,r15d
+  401604:	e8 a7 0f 00 00       	call   4025b0 <strcat@plt+0x1410>
+  401609:	48 21 e8             	and    rax,rbp
+  40160c:	48 09 c3             	or     rbx,rax
+  40160f:	4a 85 2c e5 10 85 41 	test   QWORD PTR [r12*8+0x418510],rbp
+  401616:	00
+  401617:	74 11                	je     40162a <strcat@plt+0x48a>
+  401619:	4c 89 ef             	mov    rdi,r13
+  40161c:	44 89 fe             	mov    esi,r15d
+  40161f:	e8 bc 0f 00 00       	call   4025e0 <strcat@plt+0x1440>
+  401624:	48 21 e8             	and    rax,rbp
+  401627:	48 09 c3             	or     rbx,rax
+  40162a:	48 89 d8             	mov    rax,rbx
+  40162d:	48 83 c4 08          	add    rsp,0x8
+  401631:	5b                   	pop    rbx
+  401632:	41 5c                	pop    r12
+  401634:	41 5d                	pop    r13
+  401636:	41 5e                	pop    r14
+  401638:	41 5f                	pop    r15
+  40163a:	5d                   	pop    rbp
+  40163b:	c3                   	ret
+  40163c:	4c 8b 2c 24          	mov    r13,QWORD PTR [rsp]
+  401640:	4a 85 2c e5 10 83 41 	test   QWORD PTR [r12*8+0x418310],rbp
+  401647:	00
+  401648:	75 b4                	jne    4015fe <strcat@plt+0x45e>
+  40164a:	eb c3                	jmp    40160f <strcat@plt+0x46f>
+  40164c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]

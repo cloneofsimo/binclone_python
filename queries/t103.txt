@@ -1,0 +1,47 @@
+  401b00:	53                   	push   rbx
+  401b01:	48 8b 87 38 02 00 00 	mov    rax,QWORD PTR [rdi+0x238]
+  401b08:	48 8b 8f 40 02 00 00 	mov    rcx,QWORD PTR [rdi+0x240]
+  401b0f:	31 db                	xor    ebx,ebx
+  401b11:	48 39 c8             	cmp    rax,rcx
+  401b14:	72 13                	jb     401b29 <fwrite@plt+0x9c9>
+  401b16:	48 89 d8             	mov    rax,rbx
+  401b19:	5b                   	pop    rbx
+  401b1a:	c3                   	ret
+  401b1b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  401b20:	48 83 c0 48          	add    rax,0x48
+  401b24:	48 39 c8             	cmp    rax,rcx
+  401b27:	73 ed                	jae    401b16 <fwrite@plt+0x9b6>
+  401b29:	48 8b 50 08          	mov    rdx,QWORD PTR [rax+0x8]
+  401b2d:	48 8b 70 10          	mov    rsi,QWORD PTR [rax+0x10]
+  401b31:	48 2b 16             	sub    rdx,QWORD PTR [rsi]
+  401b34:	48 8b 70 18          	mov    rsi,QWORD PTR [rax+0x18]
+  401b38:	48 03 16             	add    rdx,QWORD PTR [rsi]
+  401b3b:	0f bf 70 20          	movsx  esi,WORD PTR [rax+0x20]
+  401b3f:	83 fe 02             	cmp    esi,0x2
+  401b42:	73 1c                	jae    401b60 <fwrite@plt+0xa00>
+  401b44:	31 f6                	xor    esi,esi
+  401b46:	48 2b b7 00 02 00 00 	sub    rsi,QWORD PTR [rdi+0x200]
+  401b4d:	48 39 f2             	cmp    rdx,rsi
+  401b50:	7d ce                	jge    401b20 <fwrite@plt+0x9c0>
+  401b52:	eb 17                	jmp    401b6b <fwrite@plt+0xa0b>
+  401b54:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+  401b5b:	00 00 00
+  401b5e:	66 90                	xchg   ax,ax
+  401b60:	75 be                	jne    401b20 <fwrite@plt+0x9c0>
+  401b62:	48 3b 97 00 02 00 00 	cmp    rdx,QWORD PTR [rdi+0x200]
+  401b69:	7e b5                	jle    401b20 <fwrite@plt+0x9c0>
+  401b6b:	48 8b 0d 8e b5 00 00 	mov    rcx,QWORD PTR [rip+0xb58e]        # 40d100 <stderr@@GLIBC_2.2.5>
+  401b72:	bb 01 00 00 00       	mov    ebx,0x1
+  401b77:	bf c7 a2 40 00       	mov    edi,0x40a2c7
+  401b7c:	be 16 00 00 00       	mov    esi,0x16
+  401b81:	ba 01 00 00 00       	mov    edx,0x1
+  401b86:	e8 d5 f5 ff ff       	call   401160 <fwrite@plt>
+  401b8b:	48 8b 0d 6e b5 00 00 	mov    rcx,QWORD PTR [rip+0xb56e]        # 40d100 <stderr@@GLIBC_2.2.5>
+  401b92:	bf de a2 40 00       	mov    edi,0x40a2de
+  401b97:	be 16 00 00 00       	mov    esi,0x16
+  401b9c:	ba 01 00 00 00       	mov    edx,0x1
+  401ba1:	e8 ba f5 ff ff       	call   401160 <fwrite@plt>
+  401ba6:	48 89 d8             	mov    rax,rbx
+  401ba9:	5b                   	pop    rbx
+  401baa:	c3                   	ret
+  401bab:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]

@@ -1,0 +1,43 @@
+    4480:	f3 0f 1e fa          	endbr64
+    4484:	55                   	push   rbp
+    4485:	be 08 00 00 00       	mov    esi,0x8
+    448a:	48 89 fd             	mov    rbp,rdi
+    448d:	bf 01 00 00 00       	mov    edi,0x1
+    4492:	e8 09 cd ff ff       	call   11a0 <calloc@plt>
+    4497:	be 08 00 00 00       	mov    esi,0x8
+    449c:	bf 01 00 00 00       	mov    edi,0x1
+    44a1:	48 89 05 c0 4b 00 00 	mov    QWORD PTR [rip+0x4bc0],rax        # 9068 <stderr@@GLIBC_2.2.5+0x28>
+    44a8:	e8 f3 cc ff ff       	call   11a0 <calloc@plt>
+    44ad:	be 08 00 00 00       	mov    esi,0x8
+    44b2:	bf 01 00 00 00       	mov    edi,0x1
+    44b7:	48 89 05 b2 4b 00 00 	mov    QWORD PTR [rip+0x4bb2],rax        # 9070 <stderr@@GLIBC_2.2.5+0x30>
+    44be:	e8 dd cc ff ff       	call   11a0 <calloc@plt>
+    44c3:	be 20 00 00 00       	mov    esi,0x20
+    44c8:	bf a5 10 00 00       	mov    edi,0x10a5
+    44cd:	48 89 05 8c 4b 00 00 	mov    QWORD PTR [rip+0x4b8c],rax        # 9060 <stderr@@GLIBC_2.2.5+0x20>
+    44d4:	e8 c7 cc ff ff       	call   11a0 <calloc@plt>
+    44d9:	48 8b b5 38 02 00 00 	mov    rsi,QWORD PTR [rbp+0x238]
+    44e0:	48 89 ef             	mov    rdi,rbp
+    44e3:	48 89 05 66 4b 00 00 	mov    QWORD PTR [rip+0x4b66],rax        # 9050 <stderr@@GLIBC_2.2.5+0x10>
+    44ea:	e8 a1 00 00 00       	call   4590 <__sprintf_chk@plt+0x3340>
+    44ef:	be 01 00 00 00       	mov    esi,0x1
+    44f4:	48 89 ef             	mov    rdi,rbp
+    44f7:	e8 94 fb ff ff       	call   4090 <__sprintf_chk@plt+0x2e40>
+    44fc:	48 89 ef             	mov    rdi,rbp
+    44ff:	e8 dc d5 ff ff       	call   1ae0 <__sprintf_chk@plt+0x890>
+    4504:	48 89 ef             	mov    rdi,rbp
+    4507:	e8 24 d7 ff ff       	call   1c30 <__sprintf_chk@plt+0x9e0>
+    450c:	48 8b 3d 55 4b 00 00 	mov    rdi,QWORD PTR [rip+0x4b55]        # 9068 <stderr@@GLIBC_2.2.5+0x28>
+    4513:	48 c7 05 3a 4b 00 00 	mov    QWORD PTR [rip+0x4b3a],0x0        # 9058 <stderr@@GLIBC_2.2.5+0x18>
+    451a:	00 00 00 00
+    451e:	e8 2d cc ff ff       	call   1150 <free@plt>
+    4523:	48 8b 3d 46 4b 00 00 	mov    rdi,QWORD PTR [rip+0x4b46]        # 9070 <stderr@@GLIBC_2.2.5+0x30>
+    452a:	e8 21 cc ff ff       	call   1150 <free@plt>
+    452f:	48 8b 3d 2a 4b 00 00 	mov    rdi,QWORD PTR [rip+0x4b2a]        # 9060 <stderr@@GLIBC_2.2.5+0x20>
+    4536:	e8 15 cc ff ff       	call   1150 <free@plt>
+    453b:	48 8b 3d 0e 4b 00 00 	mov    rdi,QWORD PTR [rip+0x4b0e]        # 9050 <stderr@@GLIBC_2.2.5+0x10>
+    4542:	e8 09 cc ff ff       	call   1150 <free@plt>
+    4547:	31 c0                	xor    eax,eax
+    4549:	5d                   	pop    rbp
+    454a:	c3                   	ret
+    454b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]

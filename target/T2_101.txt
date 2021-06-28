@@ -1,0 +1,43 @@
+  403e60:	53                   	push   rbx
+  403e61:	48 89 fb             	mov    rbx,rdi
+  403e64:	bf 01 00 00 00       	mov    edi,0x1
+  403e69:	be 08 00 00 00       	mov    esi,0x8
+  403e6e:	e8 2d d2 ff ff       	call   4010a0 <calloc@plt>
+  403e73:	48 89 05 96 32 00 00 	mov    QWORD PTR [rip+0x3296],rax        # 407110 <stderr@@GLIBC_2.2.5+0x10>
+  403e7a:	bf 01 00 00 00       	mov    edi,0x1
+  403e7f:	be 08 00 00 00       	mov    esi,0x8
+  403e84:	e8 17 d2 ff ff       	call   4010a0 <calloc@plt>
+  403e89:	48 89 05 a0 32 00 00 	mov    QWORD PTR [rip+0x32a0],rax        # 407130 <stderr@@GLIBC_2.2.5+0x30>
+  403e90:	bf 01 00 00 00       	mov    edi,0x1
+  403e95:	be 08 00 00 00       	mov    esi,0x8
+  403e9a:	e8 01 d2 ff ff       	call   4010a0 <calloc@plt>
+  403e9f:	48 89 05 72 32 00 00 	mov    QWORD PTR [rip+0x3272],rax        # 407118 <stderr@@GLIBC_2.2.5+0x18>
+  403ea6:	bf a5 10 00 00       	mov    edi,0x10a5
+  403eab:	be 20 00 00 00       	mov    esi,0x20
+  403eb0:	e8 eb d1 ff ff       	call   4010a0 <calloc@plt>
+  403eb5:	48 89 05 64 32 00 00 	mov    QWORD PTR [rip+0x3264],rax        # 407120 <stderr@@GLIBC_2.2.5+0x20>
+  403ebc:	48 8b b3 38 02 00 00 	mov    rsi,QWORD PTR [rbx+0x238]
+  403ec3:	48 89 df             	mov    rdi,rbx
+  403ec6:	e8 65 00 00 00       	call   403f30 <fwrite@plt+0x2dd0>
+  403ecb:	be 01 00 00 00       	mov    esi,0x1
+  403ed0:	48 89 df             	mov    rdi,rbx
+  403ed3:	e8 78 fc ff ff       	call   403b50 <fwrite@plt+0x29f0>
+  403ed8:	48 89 df             	mov    rdi,rbx
+  403edb:	e8 40 d9 ff ff       	call   401820 <fwrite@plt+0x6c0>
+  403ee0:	48 89 df             	mov    rdi,rbx
+  403ee3:	e8 38 da ff ff       	call   401920 <fwrite@plt+0x7c0>
+  403ee8:	c6 05 39 32 00 00 00 	mov    BYTE PTR [rip+0x3239],0x0        # 407128 <stderr@@GLIBC_2.2.5+0x28>
+  403eef:	48 8b 3d 1a 32 00 00 	mov    rdi,QWORD PTR [rip+0x321a]        # 407110 <stderr@@GLIBC_2.2.5+0x10>
+  403ef6:	e8 35 d1 ff ff       	call   401030 <free@plt>
+  403efb:	48 8b 3d 2e 32 00 00 	mov    rdi,QWORD PTR [rip+0x322e]        # 407130 <stderr@@GLIBC_2.2.5+0x30>
+  403f02:	e8 29 d1 ff ff       	call   401030 <free@plt>
+  403f07:	48 8b 3d 0a 32 00 00 	mov    rdi,QWORD PTR [rip+0x320a]        # 407118 <stderr@@GLIBC_2.2.5+0x18>
+  403f0e:	e8 1d d1 ff ff       	call   401030 <free@plt>
+  403f13:	48 8b 3d 06 32 00 00 	mov    rdi,QWORD PTR [rip+0x3206]        # 407120 <stderr@@GLIBC_2.2.5+0x20>
+  403f1a:	e8 11 d1 ff ff       	call   401030 <free@plt>
+  403f1f:	31 c0                	xor    eax,eax
+  403f21:	5b                   	pop    rbx
+  403f22:	c3                   	ret
+  403f23:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+  403f2a:	00 00 00
+  403f2d:	0f 1f 00             	nop    DWORD PTR [rax]

@@ -1,0 +1,78 @@
+    6e08:	f3 0f 1e fa          	endbr64
+    6e0c:	55                   	push   rbp
+    6e0d:	48 89 e5             	mov    rbp,rsp
+    6e10:	48 83 ec 20          	sub    rsp,0x20
+    6e14:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+    6e18:	c7 45 f8 01 00 00 00 	mov    DWORD PTR [rbp-0x8],0x1
+    6e1f:	8b 45 f8             	mov    eax,DWORD PTR [rbp-0x8]
+    6e22:	48 98                	cdqe
+    6e24:	be 08 00 00 00       	mov    esi,0x8
+    6e29:	48 89 c7             	mov    rdi,rax
+    6e2c:	e8 df a3 ff ff       	call   1210 <calloc@plt>
+    6e31:	48 89 05 38 42 00 00 	mov    QWORD PTR [rip+0x4238],rax        # b070 <stderr@@GLIBC_2.2.5+0x30>
+    6e38:	8b 45 f8             	mov    eax,DWORD PTR [rbp-0x8]
+    6e3b:	48 98                	cdqe
+    6e3d:	be 08 00 00 00       	mov    esi,0x8
+    6e42:	48 89 c7             	mov    rdi,rax
+    6e45:	e8 c6 a3 ff ff       	call   1210 <calloc@plt>
+    6e4a:	48 89 05 17 42 00 00 	mov    QWORD PTR [rip+0x4217],rax        # b068 <stderr@@GLIBC_2.2.5+0x28>
+    6e51:	8b 45 f8             	mov    eax,DWORD PTR [rbp-0x8]
+    6e54:	48 98                	cdqe
+    6e56:	be 08 00 00 00       	mov    esi,0x8
+    6e5b:	48 89 c7             	mov    rdi,rax
+    6e5e:	e8 ad a3 ff ff       	call   1210 <calloc@plt>
+    6e63:	48 89 05 0e 42 00 00 	mov    QWORD PTR [rip+0x420e],rax        # b078 <stderr@@GLIBC_2.2.5+0x38>
+    6e6a:	b8 a0 0f 00 00       	mov    eax,0xfa0
+    6e6f:	99                   	cdq
+    6e70:	f7 7d f8             	idiv   DWORD PTR [rbp-0x8]
+    6e73:	05 05 01 00 00       	add    eax,0x105
+    6e78:	0f af 45 f8          	imul   eax,DWORD PTR [rbp-0x8]
+    6e7c:	48 98                	cdqe
+    6e7e:	be 20 00 00 00       	mov    esi,0x20
+    6e83:	48 89 c7             	mov    rdi,rax
+    6e86:	e8 85 a3 ff ff       	call   1210 <calloc@plt>
+    6e8b:	48 89 05 f6 41 00 00 	mov    QWORD PTR [rip+0x41f6],rax        # b088 <stderr@@GLIBC_2.2.5+0x48>
+    6e92:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+    6e96:	48 8b 90 38 02 00 00 	mov    rdx,QWORD PTR [rax+0x238]
+    6e9d:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+    6ea1:	48 89 d6             	mov    rsi,rdx
+    6ea4:	48 89 c7             	mov    rdi,rax
+    6ea7:	e8 9a 00 00 00       	call   6f46 <fwrite@plt+0x5c96>
+    6eac:	c7 45 fc 00 00 00 00 	mov    DWORD PTR [rbp-0x4],0x0
+    6eb3:	83 7d fc 00          	cmp    DWORD PTR [rbp-0x4],0x0
+    6eb7:	75 13                	jne    6ecc <fwrite@plt+0x5c1c>
+    6eb9:	8b 55 f8             	mov    edx,DWORD PTR [rbp-0x8]
+    6ebc:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+    6ec0:	89 d6                	mov    esi,edx
+    6ec2:	48 89 c7             	mov    rdi,rax
+    6ec5:	e8 61 f9 ff ff       	call   682b <fwrite@plt+0x557b>
+    6eca:	eb 14                	jmp    6ee0 <fwrite@plt+0x5c30>
+    6ecc:	8b 55 f8             	mov    edx,DWORD PTR [rbp-0x8]
+    6ecf:	8b 4d fc             	mov    ecx,DWORD PTR [rbp-0x4]
+    6ed2:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+    6ed6:	89 ce                	mov    esi,ecx
+    6ed8:	48 89 c7             	mov    rdi,rax
+    6edb:	e8 f2 f6 ff ff       	call   65d2 <fwrite@plt+0x5322>
+    6ee0:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+    6ee4:	48 89 c7             	mov    rdi,rax
+    6ee7:	e8 8e af ff ff       	call   1e7a <fwrite@plt+0xbca>
+    6eec:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+    6ef0:	48 89 c7             	mov    rdi,rax
+    6ef3:	e8 ed b0 ff ff       	call   1fe5 <fwrite@plt+0xd35>
+    6ef8:	48 c7 05 7d 41 00 00 	mov    QWORD PTR [rip+0x417d],0x0        # b080 <stderr@@GLIBC_2.2.5+0x40>
+    6eff:	00 00 00 00
+    6f03:	48 8b 05 66 41 00 00 	mov    rax,QWORD PTR [rip+0x4166]        # b070 <stderr@@GLIBC_2.2.5+0x30>
+    6f0a:	48 89 c7             	mov    rdi,rax
+    6f0d:	e8 6e a2 ff ff       	call   1180 <free@plt>
+    6f12:	48 8b 05 4f 41 00 00 	mov    rax,QWORD PTR [rip+0x414f]        # b068 <stderr@@GLIBC_2.2.5+0x28>
+    6f19:	48 89 c7             	mov    rdi,rax
+    6f1c:	e8 5f a2 ff ff       	call   1180 <free@plt>
+    6f21:	48 8b 05 50 41 00 00 	mov    rax,QWORD PTR [rip+0x4150]        # b078 <stderr@@GLIBC_2.2.5+0x38>
+    6f28:	48 89 c7             	mov    rdi,rax
+    6f2b:	e8 50 a2 ff ff       	call   1180 <free@plt>
+    6f30:	48 8b 05 51 41 00 00 	mov    rax,QWORD PTR [rip+0x4151]        # b088 <stderr@@GLIBC_2.2.5+0x48>
+    6f37:	48 89 c7             	mov    rdi,rax
+    6f3a:	e8 41 a2 ff ff       	call   1180 <free@plt>
+    6f3f:	b8 00 00 00 00       	mov    eax,0x0
+    6f44:	c9                   	leave
+    6f45:	c3                   	ret

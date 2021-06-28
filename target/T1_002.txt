@@ -1,0 +1,22 @@
+    18e0:	f3 0f 1e fa          	endbr64
+    18e4:	48 89 f0             	mov    rax,rsi
+    18e7:	48 99                	cqo
+    18e9:	48 f7 bf 70 02 00 00 	idiv   QWORD PTR [rdi+0x270]
+    18f0:	4c 8b 87 78 02 00 00 	mov    r8,QWORD PTR [rdi+0x278]
+    18f7:	48 8b bf 80 02 00 00 	mov    rdi,QWORD PTR [rdi+0x280]
+    18fe:	48 89 d6             	mov    rsi,rdx
+    1901:	49 39 d0             	cmp    r8,rdx
+    1904:	7d 1a                	jge    1920 <__sprintf_chk@plt+0x6d0>
+    1906:	4c 29 c6             	sub    rsi,r8
+    1909:	48 8d 4f ff          	lea    rcx,[rdi-0x1]
+    190d:	48 0f af ce          	imul   rcx,rsi
+    1911:	4c 0f af c7          	imul   r8,rdi
+    1915:	4a 8d 34 01          	lea    rsi,[rcx+r8*1]
+    1919:	48 01 f0             	add    rax,rsi
+    191c:	c3                   	ret
+    191d:	0f 1f 00             	nop    DWORD PTR [rax]
+    1920:	48 0f af f7          	imul   rsi,rdi
+    1924:	48 01 f0             	add    rax,rsi
+    1927:	c3                   	ret
+    1928:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+    192f:	00 

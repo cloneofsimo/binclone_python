@@ -1,0 +1,12 @@
+    2a30:	f3 0f 1e fa          	endbr64
+    2a34:	89 f2                	mov    edx,esi
+    2a36:	83 e2 f8             	and    edx,0xfffffff8
+    2a39:	8d 42 01             	lea    eax,[rdx+0x1]
+    2a3c:	c4 e2 fb f7 ff       	shrx   rdi,rdi,rax
+    2a41:	48 8d 05 58 72 01 00 	lea    rax,[rip+0x17258]        # 19ca0 <stdin@@GLIBC_2.2.5+0x1c70>
+    2a48:	83 e7 3f             	and    edi,0x3f
+    2a4b:	83 e6 07             	and    esi,0x7
+    2a4e:	48 8d 04 f8          	lea    rax,[rax+rdi*8]
+    2a52:	0f b6 04 30          	movzx  eax,BYTE PTR [rax+rsi*1]
+    2a56:	c4 e2 e9 f7 c0       	shlx   rax,rax,rdx
+    2a5b:	c3                   	ret    

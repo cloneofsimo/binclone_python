@@ -1,0 +1,102 @@
+    1920:	f3 0f 1e fa          	endbr64
+    1924:	41 57                	push   r15
+    1926:	48 8d 05 73 a9 01 00 	lea    rax,[rip+0x1a973]        # 1c2a0 <stdin@@GLIBC_2.2.5+0x4270>
+    192d:	48 8d 0d 6c ab 01 00 	lea    rcx,[rip+0x1ab6c]        # 1c4a0 <stdin@@GLIBC_2.2.5+0x4470>
+    1934:	41 56                	push   r14
+    1936:	41 55                	push   r13
+    1938:	41 54                	push   r12
+    193a:	4c 63 e6             	movsxd r12,esi
+    193d:	45 89 e5             	mov    r13d,r12d
+    1940:	55                   	push   rbp
+    1941:	41 83 e5 07          	and    r13d,0x7
+    1945:	4c 89 e5             	mov    rbp,r12
+    1948:	53                   	push   rbx
+    1949:	48 83 ec 18          	sub    rsp,0x18
+    194d:	48 8b 97 30 01 00 00 	mov    rdx,QWORD PTR [rdi+0x130]
+    1954:	48 8b 9f 70 01 00 00 	mov    rbx,QWORD PTR [rdi+0x170]
+    195b:	4a 23 14 e0          	and    rdx,QWORD PTR [rax+r12*8]
+    195f:	48 8b 87 28 01 00 00 	mov    rax,QWORD PTR [rdi+0x128]
+    1966:	4c 8b b7 08 01 00 00 	mov    r14,QWORD PTR [rdi+0x108]
+    196d:	4a 23 04 e1          	and    rax,QWORD PTR [rcx+r12*8]
+    1971:	48 09 c2             	or     rdx,rax
+    1974:	48 8b 87 40 01 00 00 	mov    rax,QWORD PTR [rdi+0x140]
+    197b:	48 8d 0d 1e af 01 00 	lea    rcx,[rip+0x1af1e]        # 1c8a0 <stdin@@GLIBC_2.2.5+0x4870>
+    1982:	48 0b 87 38 01 00 00 	or     rax,QWORD PTR [rdi+0x138]
+    1989:	4a 23 04 e1          	and    rax,QWORD PTR [rcx+r12*8]
+    198d:	48 09 d0             	or     rax,rdx
+    1990:	48 8b 97 50 01 00 00 	mov    rdx,QWORD PTR [rdi+0x150]
+    1997:	48 8d 0d 02 ad 01 00 	lea    rcx,[rip+0x1ad02]        # 1c6a0 <stdin@@GLIBC_2.2.5+0x4670>
+    199e:	48 0b 97 48 01 00 00 	or     rdx,QWORD PTR [rdi+0x148]
+    19a5:	4a 23 14 e1          	and    rdx,QWORD PTR [rcx+r12*8]
+    19a9:	48 09 c2             	or     rdx,rax
+    19ac:	49 89 d7             	mov    r15,rdx
+    19af:	48 8b 97 60 01 00 00 	mov    rdx,QWORD PTR [rdi+0x160]
+    19b6:	48 8b 87 68 01 00 00 	mov    rax,QWORD PTR [rdi+0x168]
+    19bd:	48 09 da             	or     rdx,rbx
+    19c0:	48 0b 97 58 01 00 00 	or     rdx,QWORD PTR [rdi+0x158]
+    19c7:	48 09 c3             	or     rbx,rax
+    19ca:	48 09 c2             	or     rdx,rax
+    19cd:	44 89 e0             	mov    eax,r12d
+    19d0:	c1 f8 03             	sar    eax,0x3
+    19d3:	48 0b 9f 80 01 00 00 	or     rbx,QWORD PTR [rdi+0x180]
+    19da:	48 98                	cdqe
+    19dc:	48 8d 0d 3d 7a 01 00 	lea    rcx,[rip+0x17a3d]        # 19420 <stdin@@GLIBC_2.2.5+0x13f0>
+    19e3:	48 0b 9f 78 01 00 00 	or     rbx,QWORD PTR [rdi+0x178]
+    19ea:	48 85 14 c1          	test   QWORD PTR [rcx+rax*8],rdx
+    19ee:	75 40                	jne    1a30 <__sprintf_chk@plt+0x680>
+    19f0:	4d 63 ed             	movsxd r13,r13d
+    19f3:	48 8d 05 66 7a 01 00 	lea    rax,[rip+0x17a66]        # 19460 <stdin@@GLIBC_2.2.5+0x1430>
+    19fa:	4a 85 14 e8          	test   QWORD PTR [rax+r13*8],rdx
+    19fe:	75 5b                	jne    1a5b <__sprintf_chk@plt+0x6ab>
+    1a00:	48 8d 05 99 7c 01 00 	lea    rax,[rip+0x17c99]        # 196a0 <stdin@@GLIBC_2.2.5+0x1670>
+    1a07:	4a 85 1c e0          	test   QWORD PTR [rax+r12*8],rbx
+    1a0b:	75 75                	jne    1a82 <__sprintf_chk@plt+0x6d2>
+    1a0d:	48 8d 05 8c 7a 01 00 	lea    rax,[rip+0x17a8c]        # 194a0 <stdin@@GLIBC_2.2.5+0x1470>
+    1a14:	4a 85 1c e0          	test   QWORD PTR [rax+r12*8],rbx
+    1a18:	0f 85 85 00 00 00    	jne    1aa3 <__sprintf_chk@plt+0x6f3>
+    1a1e:	48 83 c4 18          	add    rsp,0x18
+    1a22:	5b                   	pop    rbx
+    1a23:	5d                   	pop    rbp
+    1a24:	41 5c                	pop    r12
+    1a26:	41 5d                	pop    r13
+    1a28:	41 5e                	pop    r14
+    1a2a:	4c 89 f8             	mov    rax,r15
+    1a2d:	41 5f                	pop    r15
+    1a2f:	c3                   	ret
+    1a30:	44 89 e6             	mov    esi,r12d
+    1a33:	4c 89 f7             	mov    rdi,r14
+    1a36:	48 89 54 24 08       	mov    QWORD PTR [rsp+0x8],rdx
+    1a3b:	e8 f0 0f 00 00       	call   2a30 <__sprintf_chk@plt+0x1680>
+    1a40:	48 8b 54 24 08       	mov    rdx,QWORD PTR [rsp+0x8]
+    1a45:	4d 63 ed             	movsxd r13,r13d
+    1a48:	48 21 d0             	and    rax,rdx
+    1a4b:	49 09 c7             	or     r15,rax
+    1a4e:	48 8d 05 0b 7a 01 00 	lea    rax,[rip+0x17a0b]        # 19460 <stdin@@GLIBC_2.2.5+0x1430>
+    1a55:	4a 85 14 e8          	test   QWORD PTR [rax+r13*8],rdx
+    1a59:	74 a5                	je     1a00 <__sprintf_chk@plt+0x650>
+    1a5b:	89 ee                	mov    esi,ebp
+    1a5d:	4c 89 f7             	mov    rdi,r14
+    1a60:	48 89 54 24 08       	mov    QWORD PTR [rsp+0x8],rdx
+    1a65:	e8 f6 0f 00 00       	call   2a60 <__sprintf_chk@plt+0x16b0>
+    1a6a:	48 8b 54 24 08       	mov    rdx,QWORD PTR [rsp+0x8]
+    1a6f:	48 21 c2             	and    rdx,rax
+    1a72:	48 8d 05 27 7c 01 00 	lea    rax,[rip+0x17c27]        # 196a0 <stdin@@GLIBC_2.2.5+0x1670>
+    1a79:	49 09 d7             	or     r15,rdx
+    1a7c:	4a 85 1c e0          	test   QWORD PTR [rax+r12*8],rbx
+    1a80:	74 8b                	je     1a0d <__sprintf_chk@plt+0x65d>
+    1a82:	89 ee                	mov    esi,ebp
+    1a84:	4c 89 f7             	mov    rdi,r14
+    1a87:	e8 24 10 00 00       	call   2ab0 <__sprintf_chk@plt+0x1700>
+    1a8c:	48 21 d8             	and    rax,rbx
+    1a8f:	49 09 c7             	or     r15,rax
+    1a92:	48 8d 05 07 7a 01 00 	lea    rax,[rip+0x17a07]        # 194a0 <stdin@@GLIBC_2.2.5+0x1470>
+    1a99:	4a 85 1c e0          	test   QWORD PTR [rax+r12*8],rbx
+    1a9d:	0f 84 7b ff ff ff    	je     1a1e <__sprintf_chk@plt+0x66e>
+    1aa3:	89 ee                	mov    esi,ebp
+    1aa5:	4c 89 f7             	mov    rdi,r14
+    1aa8:	e8 43 10 00 00       	call   2af0 <__sprintf_chk@plt+0x1740>
+    1aad:	48 21 c3             	and    rbx,rax
+    1ab0:	49 09 df             	or     r15,rbx
+    1ab3:	e9 66 ff ff ff       	jmp    1a1e <__sprintf_chk@plt+0x66e>
+    1ab8:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+    1abf:	00 

@@ -1,0 +1,18 @@
+  401690:	48 89 f0             	mov    rax,rsi
+  401693:	48 99                	cqo
+  401695:	48 f7 bf 70 02 00 00 	idiv   QWORD PTR [rdi+0x270]
+  40169c:	48 8b b7 78 02 00 00 	mov    rsi,QWORD PTR [rdi+0x278]
+  4016a3:	48 8b 8f 80 02 00 00 	mov    rcx,QWORD PTR [rdi+0x280]
+  4016aa:	48 89 d7             	mov    rdi,rdx
+  4016ad:	48 29 f7             	sub    rdi,rsi
+  4016b0:	7e 11                	jle    4016c3 <fwrite@plt+0x563>
+  4016b2:	48 0f af f1          	imul   rsi,rcx
+  4016b6:	48 83 c1 ff          	add    rcx,0xffffffffffffffff
+  4016ba:	48 0f af cf          	imul   rcx,rdi
+  4016be:	48 01 f1             	add    rcx,rsi
+  4016c1:	eb 04                	jmp    4016c7 <fwrite@plt+0x567>
+  4016c3:	48 0f af ca          	imul   rcx,rdx
+  4016c7:	48 01 c1             	add    rcx,rax
+  4016ca:	48 89 c8             	mov    rax,rcx
+  4016cd:	c3                   	ret
+  4016ce:	66 90                	xchg   ax,ax

@@ -1,0 +1,133 @@
+  4017b0:	55                   	push   rbp
+  4017b1:	48 89 e5             	mov    rbp,rsp
+  4017b4:	48 83 ec 60          	sub    rsp,0x60
+  4017b8:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  4017bc:	89 75 f4             	mov    DWORD PTR [rbp-0xc],esi
+  4017bf:	8b 75 f4             	mov    esi,DWORD PTR [rbp-0xc]
+  4017c2:	83 e6 07             	and    esi,0x7
+  4017c5:	89 75 d4             	mov    DWORD PTR [rbp-0x2c],esi
+  4017c8:	8b 75 f4             	mov    esi,DWORD PTR [rbp-0xc]
+  4017cb:	c1 fe 03             	sar    esi,0x3
+  4017ce:	89 75 d0             	mov    DWORD PTR [rbp-0x30],esi
+  4017d1:	48 8b 7d f8          	mov    rdi,QWORD PTR [rbp-0x8]
+  4017d5:	48 81 c7 20 01 00 00 	add    rdi,0x120
+  4017dc:	48 89 7d c8          	mov    QWORD PTR [rbp-0x38],rdi
+  4017e0:	48 8b 7d f8          	mov    rdi,QWORD PTR [rbp-0x8]
+  4017e4:	48 8b bf 08 01 00 00 	mov    rdi,QWORD PTR [rdi+0x108]
+  4017eb:	48 89 7d c0          	mov    QWORD PTR [rbp-0x40],rdi
+  4017ef:	48 8b 7d c8          	mov    rdi,QWORD PTR [rbp-0x38]
+  4017f3:	48 8b 7f 10          	mov    rdi,QWORD PTR [rdi+0x10]
+  4017f7:	48 63 45 f4          	movsxd rax,DWORD PTR [rbp-0xc]
+  4017fb:	48 23 3c c5 20 f7 41 	and    rdi,QWORD PTR [rax*8+0x41f720]
+  401802:	00
+  401803:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  401807:	48 8b 45 c8          	mov    rax,QWORD PTR [rbp-0x38]
+  40180b:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+  40180f:	48 63 7d f4          	movsxd rdi,DWORD PTR [rbp-0xc]
+  401813:	48 23 04 fd 20 f5 41 	and    rax,QWORD PTR [rdi*8+0x41f520]
+  40181a:	00
+  40181b:	48 0b 45 e8          	or     rax,QWORD PTR [rbp-0x18]
+  40181f:	48 89 45 e8          	mov    QWORD PTR [rbp-0x18],rax
+  401823:	48 8b 45 c8          	mov    rax,QWORD PTR [rbp-0x38]
+  401827:	48 8b 40 20          	mov    rax,QWORD PTR [rax+0x20]
+  40182b:	48 8b 7d c8          	mov    rdi,QWORD PTR [rbp-0x38]
+  40182f:	48 0b 47 18          	or     rax,QWORD PTR [rdi+0x18]
+  401833:	48 63 7d f4          	movsxd rdi,DWORD PTR [rbp-0xc]
+  401837:	48 23 04 fd 20 f1 41 	and    rax,QWORD PTR [rdi*8+0x41f120]
+  40183e:	00
+  40183f:	48 0b 45 e8          	or     rax,QWORD PTR [rbp-0x18]
+  401843:	48 89 45 e8          	mov    QWORD PTR [rbp-0x18],rax
+  401847:	48 8b 45 c8          	mov    rax,QWORD PTR [rbp-0x38]
+  40184b:	48 8b 40 30          	mov    rax,QWORD PTR [rax+0x30]
+  40184f:	48 8b 7d c8          	mov    rdi,QWORD PTR [rbp-0x38]
+  401853:	48 0b 47 28          	or     rax,QWORD PTR [rdi+0x28]
+  401857:	48 63 7d f4          	movsxd rdi,DWORD PTR [rbp-0xc]
+  40185b:	48 23 04 fd 20 f3 41 	and    rax,QWORD PTR [rdi*8+0x41f320]
+  401862:	00
+  401863:	48 0b 45 e8          	or     rax,QWORD PTR [rbp-0x18]
+  401867:	48 89 45 e8          	mov    QWORD PTR [rbp-0x18],rax
+  40186b:	48 8b 45 c8          	mov    rax,QWORD PTR [rbp-0x38]
+  40186f:	48 8b 40 40          	mov    rax,QWORD PTR [rax+0x40]
+  401873:	48 8b 7d c8          	mov    rdi,QWORD PTR [rbp-0x38]
+  401877:	48 0b 47 50          	or     rax,QWORD PTR [rdi+0x50]
+  40187b:	48 8b 7d c8          	mov    rdi,QWORD PTR [rbp-0x38]
+  40187f:	48 0b 47 38          	or     rax,QWORD PTR [rdi+0x38]
+  401883:	48 8b 7d c8          	mov    rdi,QWORD PTR [rbp-0x38]
+  401887:	48 0b 47 48          	or     rax,QWORD PTR [rdi+0x48]
+  40188b:	48 89 45 e0          	mov    QWORD PTR [rbp-0x20],rax
+  40188f:	48 8b 45 c8          	mov    rax,QWORD PTR [rbp-0x38]
+  401893:	48 8b 40 60          	mov    rax,QWORD PTR [rax+0x60]
+  401897:	48 8b 7d c8          	mov    rdi,QWORD PTR [rbp-0x38]
+  40189b:	48 0b 47 50          	or     rax,QWORD PTR [rdi+0x50]
+  40189f:	48 8b 7d c8          	mov    rdi,QWORD PTR [rbp-0x38]
+  4018a3:	48 0b 47 58          	or     rax,QWORD PTR [rdi+0x58]
+  4018a7:	48 8b 7d c8          	mov    rdi,QWORD PTR [rbp-0x38]
+  4018ab:	48 0b 47 48          	or     rax,QWORD PTR [rdi+0x48]
+  4018af:	48 89 45 d8          	mov    QWORD PTR [rbp-0x28],rax
+  4018b3:	48 63 45 d0          	movsxd rax,DWORD PTR [rbp-0x30]
+  4018b7:	48 8b 04 c5 60 27 42 	mov    rax,QWORD PTR [rax*8+0x422760]
+  4018be:	00
+  4018bf:	48 23 45 e0          	and    rax,QWORD PTR [rbp-0x20]
+  4018c3:	48 83 f8 00          	cmp    rax,0x0
+  4018c7:	0f 84 23 00 00 00    	je     4018f0 <strcat@plt+0x720>
+  4018cd:	48 8b 45 e0          	mov    rax,QWORD PTR [rbp-0x20]
+  4018d1:	48 8b 7d c0          	mov    rdi,QWORD PTR [rbp-0x40]
+  4018d5:	8b 75 f4             	mov    esi,DWORD PTR [rbp-0xc]
+  4018d8:	48 89 45 b8          	mov    QWORD PTR [rbp-0x48],rax
+  4018dc:	e8 0f 1a 00 00       	call   4032f0 <strcat@plt+0x2120>
+  4018e1:	48 8b 7d b8          	mov    rdi,QWORD PTR [rbp-0x48]
+  4018e5:	48 21 c7             	and    rdi,rax
+  4018e8:	48 0b 7d e8          	or     rdi,QWORD PTR [rbp-0x18]
+  4018ec:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  4018f0:	48 63 45 d4          	movsxd rax,DWORD PTR [rbp-0x2c]
+  4018f4:	48 8b 04 c5 20 27 42 	mov    rax,QWORD PTR [rax*8+0x422720]
+  4018fb:	00
+  4018fc:	48 23 45 e0          	and    rax,QWORD PTR [rbp-0x20]
+  401900:	48 83 f8 00          	cmp    rax,0x0
+  401904:	0f 84 23 00 00 00    	je     40192d <strcat@plt+0x75d>
+  40190a:	48 8b 45 e0          	mov    rax,QWORD PTR [rbp-0x20]
+  40190e:	48 8b 7d c0          	mov    rdi,QWORD PTR [rbp-0x40]
+  401912:	8b 75 f4             	mov    esi,DWORD PTR [rbp-0xc]
+  401915:	48 89 45 b0          	mov    QWORD PTR [rbp-0x50],rax
+  401919:	e8 42 1a 00 00       	call   403360 <strcat@plt+0x2190>
+  40191e:	48 8b 7d b0          	mov    rdi,QWORD PTR [rbp-0x50]
+  401922:	48 21 c7             	and    rdi,rax
+  401925:	48 0b 7d e8          	or     rdi,QWORD PTR [rbp-0x18]
+  401929:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  40192d:	48 63 45 f4          	movsxd rax,DWORD PTR [rbp-0xc]
+  401931:	48 8b 04 c5 20 23 42 	mov    rax,QWORD PTR [rax*8+0x422320]
+  401938:	00
+  401939:	48 23 45 d8          	and    rax,QWORD PTR [rbp-0x28]
+  40193d:	48 83 f8 00          	cmp    rax,0x0
+  401941:	0f 84 23 00 00 00    	je     40196a <strcat@plt+0x79a>
+  401947:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  40194b:	48 8b 7d c0          	mov    rdi,QWORD PTR [rbp-0x40]
+  40194f:	8b 75 f4             	mov    esi,DWORD PTR [rbp-0xc]
+  401952:	48 89 45 a8          	mov    QWORD PTR [rbp-0x58],rax
+  401956:	e8 85 1a 00 00       	call   4033e0 <strcat@plt+0x2210>
+  40195b:	48 8b 7d a8          	mov    rdi,QWORD PTR [rbp-0x58]
+  40195f:	48 21 c7             	and    rdi,rax
+  401962:	48 0b 7d e8          	or     rdi,QWORD PTR [rbp-0x18]
+  401966:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  40196a:	48 63 45 f4          	movsxd rax,DWORD PTR [rbp-0xc]
+  40196e:	48 8b 04 c5 20 25 42 	mov    rax,QWORD PTR [rax*8+0x422520]
+  401975:	00
+  401976:	48 23 45 d8          	and    rax,QWORD PTR [rbp-0x28]
+  40197a:	48 83 f8 00          	cmp    rax,0x0
+  40197e:	0f 84 23 00 00 00    	je     4019a7 <strcat@plt+0x7d7>
+  401984:	48 8b 45 d8          	mov    rax,QWORD PTR [rbp-0x28]
+  401988:	48 8b 7d c0          	mov    rdi,QWORD PTR [rbp-0x40]
+  40198c:	8b 75 f4             	mov    esi,DWORD PTR [rbp-0xc]
+  40198f:	48 89 45 a0          	mov    QWORD PTR [rbp-0x60],rax
+  401993:	e8 c8 1a 00 00       	call   403460 <strcat@plt+0x2290>
+  401998:	48 8b 7d a0          	mov    rdi,QWORD PTR [rbp-0x60]
+  40199c:	48 21 c7             	and    rdi,rax
+  40199f:	48 0b 7d e8          	or     rdi,QWORD PTR [rbp-0x18]
+  4019a3:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  4019a7:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  4019ab:	48 83 c4 60          	add    rsp,0x60
+  4019af:	5d                   	pop    rbp
+  4019b0:	c3                   	ret
+  4019b1:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+  4019b8:	00 00 00
+  4019bb:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]

@@ -1,0 +1,91 @@
+  410700:	8b 35 3a 9a b5 00    	mov    esi,DWORD PTR [rip+0xb59a3a]        # f6a140 <stdin@@GLIBC_2.2.5+0xb52050>
+  410706:	85 f6                	test   esi,esi
+  410708:	74 79                	je     410783 <strcat@plt+0xf5f3>
+  41070a:	c5 fb 2a c6          	vcvtsi2sd xmm0,xmm0,esi
+  41070e:	c5 fb 58 05 c2 3f 00 	vaddsd xmm0,xmm0,QWORD PTR [rip+0x3fc2]        # 4146d8 <strcat@plt+0x13548>
+  410715:	00
+  410716:	c5 fb 10 0d c2 3f 00 	vmovsd xmm1,QWORD PTR [rip+0x3fc2]        # 4146e0 <strcat@plt+0x13550>
+  41071d:	00
+  41071e:	c5 f3 c2 c8 01       	vcmpltsd xmm1,xmm1,xmm0
+  410723:	c5 f1 55 c0          	vandnpd xmm0,xmm1,xmm0
+  410727:	c5 fb 10 15 b9 3f 00 	vmovsd xmm2,QWORD PTR [rip+0x3fb9]        # 4146e8 <strcat@plt+0x13558>
+  41072e:	00
+  41072f:	c5 f1 54 ca          	vandpd xmm1,xmm1,xmm2
+  410733:	c5 f9 56 c1          	vorpd  xmm0,xmm0,xmm1
+  410737:	83 3d 36 67 b5 00 00 	cmp    DWORD PTR [rip+0xb56736],0x0        # f66e74 <stdin@@GLIBC_2.2.5+0xb4ed84>
+  41073e:	8b 0d 0c 9a b5 00    	mov    ecx,DWORD PTR [rip+0xb59a0c]        # f6a150 <stdin@@GLIBC_2.2.5+0xb52060>
+  410744:	c5 e3 2a c9          	vcvtsi2sd xmm1,xmm3,ecx
+  410748:	c5 f3 58 0d a0 3f 00 	vaddsd xmm1,xmm1,QWORD PTR [rip+0x3fa0]        # 4146f0 <strcat@plt+0x13560>
+  41074f:	00
+  410750:	75 1a                	jne    41076c <strcat@plt+0xf5dc>
+  410752:	8b 15 0c 9a b5 00    	mov    edx,DWORD PTR [rip+0xb59a0c]        # f6a164 <stdin@@GLIBC_2.2.5+0xb52074>
+  410758:	89 d0                	mov    eax,edx
+  41075a:	c1 e8 1f             	shr    eax,0x1f
+  41075d:	01 d0                	add    eax,edx
+  41075f:	d1 f8                	sar    eax,1
+  410761:	99                   	cdq
+  410762:	f7 fe                	idiv   esi
+  410764:	c5 e3 2a d2          	vcvtsi2sd xmm2,xmm3,edx
+  410768:	c5 fb 5c c2          	vsubsd xmm0,xmm0,xmm2
+  41076c:	c5 f3 5e c0          	vdivsd xmm0,xmm1,xmm0
+  410770:	83 3d f1 66 b5 00 00 	cmp    DWORD PTR [rip+0xb566f1],0x0        # f66e68 <stdin@@GLIBC_2.2.5+0xb4ed78>
+  410777:	74 3e                	je     4107b7 <strcat@plt+0xf627>
+  410779:	c5 fb 59 0d 7f 3d 00 	vmulsd xmm1,xmm0,QWORD PTR [rip+0x3d7f]        # 414500 <strcat@plt+0x13370>
+  410780:	00
+  410781:	eb 3c                	jmp    4107bf <strcat@plt+0xf62f>
+  410783:	8b 0d df 66 b5 00    	mov    ecx,DWORD PTR [rip+0xb566df]        # f66e68 <stdin@@GLIBC_2.2.5+0xb4ed78>
+  410789:	31 c0                	xor    eax,eax
+  41078b:	85 c9                	test   ecx,ecx
+  41078d:	0f 94 c0             	sete   al
+  410790:	c5 fb 10 04 c5 20 47 	vmovsd xmm0,QWORD PTR [rax*8+0x414720]
+  410797:	41 00
+  410799:	8b 05 ad 99 b5 00    	mov    eax,DWORD PTR [rip+0xb599ad]        # f6a14c <stdin@@GLIBC_2.2.5+0xb5205c>
+  41079f:	85 c0                	test   eax,eax
+  4107a1:	74 08                	je     4107ab <strcat@plt+0xf61b>
+  4107a3:	c5 fb 58 05 55 3f 00 	vaddsd xmm0,xmm0,QWORD PTR [rip+0x3f55]        # 414700 <strcat@plt+0x13570>
+  4107aa:	00
+  4107ab:	75 25                	jne    4107d2 <strcat@plt+0xf642>
+  4107ad:	c5 f9 28 c8          	vmovapd xmm1,xmm0
+  4107b1:	85 c9                	test   ecx,ecx
+  4107b3:	74 29                	je     4107de <strcat@plt+0xf64e>
+  4107b5:	eb 2b                	jmp    4107e2 <strcat@plt+0xf652>
+  4107b7:	c5 fb 59 0d 39 3f 00 	vmulsd xmm1,xmm0,QWORD PTR [rip+0x3f39]        # 4146f8 <strcat@plt+0x13568>
+  4107be:	00
+  4107bf:	83 c1 9c             	add    ecx,0xffffff9c
+  4107c2:	c5 e3 2a d1          	vcvtsi2sd xmm2,xmm3,ecx
+  4107c6:	c5 f9 2e d1          	vucomisd xmm2,xmm1
+  4107ca:	76 68                	jbe    410834 <strcat@plt+0xf6a4>
+  4107cc:	c5 f9 28 c1          	vmovapd xmm0,xmm1
+  4107d0:	eb 62                	jmp    410834 <strcat@plt+0xf6a4>
+  4107d2:	c5 fb 58 0d 2e 3f 00 	vaddsd xmm1,xmm0,QWORD PTR [rip+0x3f2e]        # 414708 <strcat@plt+0x13578>
+  4107d9:	00
+  4107da:	85 c9                	test   ecx,ecx
+  4107dc:	75 04                	jne    4107e2 <strcat@plt+0xf652>
+  4107de:	c5 f9 28 c8          	vmovapd xmm1,xmm0
+  4107e2:	c5 eb 2a 15 66 99 b5 	vcvtsi2sd xmm2,xmm2,DWORD PTR [rip+0xb59966]        # f6a150 <stdin@@GLIBC_2.2.5+0xb52060>
+  4107e9:	00
+  4107ea:	c5 eb 5e c1          	vdivsd xmm0,xmm2,xmm1
+  4107ee:	85 c0                	test   eax,eax
+  4107f0:	74 42                	je     410834 <strcat@plt+0xf6a4>
+  4107f2:	c5 eb 5c c8          	vsubsd xmm1,xmm2,xmm0
+  4107f6:	c5 e3 2a d0          	vcvtsi2sd xmm2,xmm3,eax
+  4107fa:	c5 f3 5c da          	vsubsd xmm3,xmm1,xmm2
+  4107fe:	c5 f9 2e 1d 0a 3f 00 	vucomisd xmm3,QWORD PTR [rip+0x3f0a]        # 414710 <strcat@plt+0x13580>
+  410805:	00
+  410806:	76 09                	jbe    410811 <strcat@plt+0xf681>
+  410808:	c5 fb 58 c2          	vaddsd xmm0,xmm0,xmm2
+  41080c:	c5 fb 2c c0          	vcvttsd2si eax,xmm0
+  410810:	c3                   	ret
+  410811:	c5 eb 58 d2          	vaddsd xmm2,xmm2,xmm2
+  410815:	c5 eb 5e 15 fb 3e 00 	vdivsd xmm2,xmm2,QWORD PTR [rip+0x3efb]        # 414718 <strcat@plt+0x13588>
+  41081c:	00
+  41081d:	c5 f3 5c ca          	vsubsd xmm1,xmm1,xmm2
+  410821:	c5 f9 2e 0d df 3c 00 	vucomisd xmm1,QWORD PTR [rip+0x3cdf]        # 414508 <strcat@plt+0x13378>
+  410828:	00
+  410829:	76 09                	jbe    410834 <strcat@plt+0xf6a4>
+  41082b:	c5 eb 58 c0          	vaddsd xmm0,xmm2,xmm0
+  41082f:	c5 fb 2c c0          	vcvttsd2si eax,xmm0
+  410833:	c3                   	ret
+  410834:	c5 fb 2c c0          	vcvttsd2si eax,xmm0
+  410838:	c3                   	ret
+  410839:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]

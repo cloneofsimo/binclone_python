@@ -1,0 +1,90 @@
+    170f:	f3 0f 1e fa          	endbr64
+    1713:	41 57                	push   r15
+    1715:	41 56                	push   r14
+    1717:	41 55                	push   r13
+    1719:	41 54                	push   r12
+    171b:	55                   	push   rbp
+    171c:	53                   	push   rbx
+    171d:	48 83 ec 08          	sub    rsp,0x8
+    1721:	89 f5                	mov    ebp,esi
+    1723:	41 89 f5             	mov    r13d,esi
+    1726:	41 83 e5 07          	and    r13d,0x7
+    172a:	4c 8b b7 08 01 00 00 	mov    r14,QWORD PTR [rdi+0x108]
+    1731:	48 63 d6             	movsxd rdx,esi
+    1734:	48 8b 87 30 01 00 00 	mov    rax,QWORD PTR [rdi+0x130]
+    173b:	48 8d 0d 5e 9b 01 00 	lea    rcx,[rip+0x19b5e]        # 1b2a0 <stdin@@GLIBC_2.2.5+0x4270>
+    1742:	48 23 04 d1          	and    rax,QWORD PTR [rcx+rdx*8]
+    1746:	48 89 c3             	mov    rbx,rax
+    1749:	48 8b 87 28 01 00 00 	mov    rax,QWORD PTR [rdi+0x128]
+    1750:	48 8d 0d 49 9d 01 00 	lea    rcx,[rip+0x19d49]        # 1b4a0 <stdin@@GLIBC_2.2.5+0x4470>
+    1757:	48 23 04 d1          	and    rax,QWORD PTR [rcx+rdx*8]
+    175b:	48 09 d8             	or     rax,rbx
+    175e:	48 8b 9f 40 01 00 00 	mov    rbx,QWORD PTR [rdi+0x140]
+    1765:	48 0b 9f 38 01 00 00 	or     rbx,QWORD PTR [rdi+0x138]
+    176c:	48 8d 0d 2d a1 01 00 	lea    rcx,[rip+0x1a12d]        # 1b8a0 <stdin@@GLIBC_2.2.5+0x4870>
+    1773:	48 23 1c d1          	and    rbx,QWORD PTR [rcx+rdx*8]
+    1777:	48 09 d8             	or     rax,rbx
+    177a:	48 8b 9f 50 01 00 00 	mov    rbx,QWORD PTR [rdi+0x150]
+    1781:	48 0b 9f 48 01 00 00 	or     rbx,QWORD PTR [rdi+0x148]
+    1788:	48 8d 0d 11 9f 01 00 	lea    rcx,[rip+0x19f11]        # 1b6a0 <stdin@@GLIBC_2.2.5+0x4670>
+    178f:	48 23 1c d1          	and    rbx,QWORD PTR [rcx+rdx*8]
+    1793:	48 09 c3             	or     rbx,rax
+    1796:	4c 8b bf 70 01 00 00 	mov    r15,QWORD PTR [rdi+0x170]
+    179d:	48 8b 87 68 01 00 00 	mov    rax,QWORD PTR [rdi+0x168]
+    17a4:	4d 89 fc             	mov    r12,r15
+    17a7:	4c 0b a7 60 01 00 00 	or     r12,QWORD PTR [rdi+0x160]
+    17ae:	4c 0b a7 58 01 00 00 	or     r12,QWORD PTR [rdi+0x158]
+    17b5:	49 09 c4             	or     r12,rax
+    17b8:	49 09 c7             	or     r15,rax
+    17bb:	4c 0b bf 80 01 00 00 	or     r15,QWORD PTR [rdi+0x180]
+    17c2:	4c 0b bf 78 01 00 00 	or     r15,QWORD PTR [rdi+0x178]
+    17c9:	89 f0                	mov    eax,esi
+    17cb:	c1 f8 03             	sar    eax,0x3
+    17ce:	48 98                	cdqe
+    17d0:	48 8d 15 49 6c 01 00 	lea    rdx,[rip+0x16c49]        # 18420 <stdin@@GLIBC_2.2.5+0x13f0>
+    17d7:	4c 85 24 c2          	test   QWORD PTR [rdx+rax*8],r12
+    17db:	75 42                	jne    181f <__sprintf_chk@plt+0x4cf>
+    17dd:	4d 63 ed             	movsxd r13,r13d
+    17e0:	48 8d 05 79 6c 01 00 	lea    rax,[rip+0x16c79]        # 18460 <stdin@@GLIBC_2.2.5+0x1430>
+    17e7:	4e 85 24 e8          	test   QWORD PTR [rax+r13*8],r12
+    17eb:	75 42                	jne    182f <__sprintf_chk@plt+0x4df>
+    17ed:	48 63 c5             	movsxd rax,ebp
+    17f0:	48 8d 15 a9 6e 01 00 	lea    rdx,[rip+0x16ea9]        # 186a0 <stdin@@GLIBC_2.2.5+0x1670>
+    17f7:	4c 85 3c c2          	test   QWORD PTR [rdx+rax*8],r15
+    17fb:	75 44                	jne    1841 <__sprintf_chk@plt+0x4f1>
+    17fd:	48 63 c5             	movsxd rax,ebp
+    1800:	48 8d 15 99 6c 01 00 	lea    rdx,[rip+0x16c99]        # 184a0 <stdin@@GLIBC_2.2.5+0x1470>
+    1807:	4c 85 3c c2          	test   QWORD PTR [rdx+rax*8],r15
+    180b:	75 46                	jne    1853 <__sprintf_chk@plt+0x503>
+    180d:	48 89 d8             	mov    rax,rbx
+    1810:	48 83 c4 08          	add    rsp,0x8
+    1814:	5b                   	pop    rbx
+    1815:	5d                   	pop    rbp
+    1816:	41 5c                	pop    r12
+    1818:	41 5d                	pop    r13
+    181a:	41 5e                	pop    r14
+    181c:	41 5f                	pop    r15
+    181e:	c3                   	ret
+    181f:	4c 89 f7             	mov    rdi,r14
+    1822:	e8 6b 10 00 00       	call   2892 <__sprintf_chk@plt+0x1542>
+    1827:	4c 21 e0             	and    rax,r12
+    182a:	48 09 c3             	or     rbx,rax
+    182d:	eb ae                	jmp    17dd <__sprintf_chk@plt+0x48d>
+    182f:	89 ee                	mov    esi,ebp
+    1831:	4c 89 f7             	mov    rdi,r14
+    1834:	e8 85 10 00 00       	call   28be <__sprintf_chk@plt+0x156e>
+    1839:	49 21 c4             	and    r12,rax
+    183c:	4c 09 e3             	or     rbx,r12
+    183f:	eb ac                	jmp    17ed <__sprintf_chk@plt+0x49d>
+    1841:	89 ee                	mov    esi,ebp
+    1843:	4c 89 f7             	mov    rdi,r14
+    1846:	e8 ba 10 00 00       	call   2905 <__sprintf_chk@plt+0x15b5>
+    184b:	4c 21 f8             	and    rax,r15
+    184e:	48 09 c3             	or     rbx,rax
+    1851:	eb aa                	jmp    17fd <__sprintf_chk@plt+0x4ad>
+    1853:	89 ee                	mov    esi,ebp
+    1855:	4c 89 f7             	mov    rdi,r14
+    1858:	e8 e1 10 00 00       	call   293e <__sprintf_chk@plt+0x15ee>
+    185d:	49 21 c7             	and    r15,rax
+    1860:	4c 09 fb             	or     rbx,r15
+    1863:	eb a8                	jmp    180d <__sprintf_chk@plt+0x4bd>

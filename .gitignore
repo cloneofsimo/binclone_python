@@ -1,7 +1,6 @@
 asms
 sources
 *.pyc
-*.txt
 *.S
 _*
 *.pptx

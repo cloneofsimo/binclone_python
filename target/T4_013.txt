@@ -1,0 +1,13 @@
+    3f00:	f3 0f 1e fa          	endbr64
+    3f04:	89 f2                	mov    edx,esi
+    3f06:	83 e2 f8             	and    edx,0xfffffff8
+    3f09:	8d 42 01             	lea    eax,[rdx+0x1]
+    3f0c:	c4 e2 fb f7 ff       	shrx   rdi,rdi,rax
+    3f11:	48 8d 05 88 8d 01 00 	lea    rax,[rip+0x18d88]        # 1cca0 <stdin@@GLIBC_2.2.5+0x1c70>
+    3f18:	83 e7 3f             	and    edi,0x3f
+    3f1b:	83 e6 07             	and    esi,0x7
+    3f1e:	48 8d 04 f8          	lea    rax,[rax+rdi*8]
+    3f22:	0f b6 04 30          	movzx  eax,BYTE PTR [rax+rsi*1]
+    3f26:	c4 e2 e9 f7 c0       	shlx   rax,rax,rdx
+    3f2b:	c3                   	ret
+    3f2c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]

@@ -1,0 +1,166 @@
+  4169b0:	55                   	push   rbp
+  4169b1:	48 89 e5             	mov    rbp,rsp
+  4169b4:	f2 0f 10 05 1c 4a 00 	movsd  xmm0,QWORD PTR [rip+0x4a1c]        # 41b3d8 <strcat@plt+0x1a208>
+  4169bb:	00
+  4169bc:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  4169c0:	89 75 f4             	mov    DWORD PTR [rbp-0xc],esi
+  4169c3:	0f 57 c9             	xorps  xmm1,xmm1
+  4169c6:	f2 0f 11 4d e8       	movsd  QWORD PTR [rbp-0x18],xmm1
+  4169cb:	f2 0f 11 45 e0       	movsd  QWORD PTR [rbp-0x20],xmm0
+  4169d0:	83 3c 25 60 11 f7 00 	cmp    DWORD PTR ds:0xf71160,0x0
+  4169d7:	00
+  4169d8:	0f 85 6d 01 00 00    	jne    416b4b <strcat@plt+0x1597b>
+  4169de:	83 3c 25 88 de f6 00 	cmp    DWORD PTR ds:0xf6de88,0x0
+  4169e5:	00
+  4169e6:	0f 84 16 00 00 00    	je     416a02 <strcat@plt+0x15832>
+  4169ec:	f2 0f 10 05 ec 49 00 	movsd  xmm0,QWORD PTR [rip+0x49ec]        # 41b3e0 <strcat@plt+0x1a210>
+  4169f3:	00
+  4169f4:	f2 0f 10 4d e0       	movsd  xmm1,QWORD PTR [rbp-0x20]
+  4169f9:	f2 0f 5c c8          	subsd  xmm1,xmm0
+  4169fd:	f2 0f 11 4d e0       	movsd  QWORD PTR [rbp-0x20],xmm1
+  416a02:	83 3c 25 6c 11 f7 00 	cmp    DWORD PTR ds:0xf7116c,0x0
+  416a09:	00
+  416a0a:	0f 84 16 00 00 00    	je     416a26 <strcat@plt+0x15856>
+  416a10:	f2 0f 10 05 d0 49 00 	movsd  xmm0,QWORD PTR [rip+0x49d0]        # 41b3e8 <strcat@plt+0x1a218>
+  416a17:	00
+  416a18:	f2 0f 10 4d e0       	movsd  xmm1,QWORD PTR [rbp-0x20]
+  416a1d:	f2 0f 5c c8          	subsd  xmm1,xmm0
+  416a21:	f2 0f 11 4d e0       	movsd  QWORD PTR [rbp-0x20],xmm1
+  416a26:	83 3c 25 88 de f6 00 	cmp    DWORD PTR ds:0xf6de88,0x0
+  416a2d:	00
+  416a2e:	0f 84 24 00 00 00    	je     416a58 <strcat@plt+0x15888>
+  416a34:	83 3c 25 6c 11 f7 00 	cmp    DWORD PTR ds:0xf7116c,0x0
+  416a3b:	00
+  416a3c:	0f 84 16 00 00 00    	je     416a58 <strcat@plt+0x15888>
+  416a42:	f2 0f 10 05 a6 49 00 	movsd  xmm0,QWORD PTR [rip+0x49a6]        # 41b3f0 <strcat@plt+0x1a220>
+  416a49:	00
+  416a4a:	f2 0f 10 4d e0       	movsd  xmm1,QWORD PTR [rbp-0x20]
+  416a4f:	f2 0f 5c c8          	subsd  xmm1,xmm0
+  416a53:	f2 0f 11 4d e0       	movsd  QWORD PTR [rbp-0x20],xmm1
+  416a58:	8b 04 25 70 11 f7 00 	mov    eax,DWORD PTR ds:0xf71170
+  416a5f:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+  416a63:	f2 0f 5e 45 e0       	divsd  xmm0,QWORD PTR [rbp-0x20]
+  416a68:	f2 0f 11 45 e8       	movsd  QWORD PTR [rbp-0x18],xmm0
+  416a6d:	83 3c 25 6c 11 f7 00 	cmp    DWORD PTR ds:0xf7116c,0x0
+  416a74:	00
+  416a75:	0f 84 cb 00 00 00    	je     416b46 <strcat@plt+0x15976>
+  416a7b:	f2 0f 10 05 75 49 00 	movsd  xmm0,QWORD PTR [rip+0x4975]        # 41b3f8 <strcat@plt+0x1a228>
+  416a82:	00
+  416a83:	8b 04 25 70 11 f7 00 	mov    eax,DWORD PTR ds:0xf71170
+  416a8a:	f2 0f 2a c8          	cvtsi2sd xmm1,eax
+  416a8e:	f2 0f 5c 4d e8       	subsd  xmm1,QWORD PTR [rbp-0x18]
+  416a93:	8b 04 25 6c 11 f7 00 	mov    eax,DWORD PTR ds:0xf7116c
+  416a9a:	f2 0f 2a d0          	cvtsi2sd xmm2,eax
+  416a9e:	f2 0f 5c ca          	subsd  xmm1,xmm2
+  416aa2:	66 0f 2e c8          	ucomisd xmm1,xmm0
+  416aa6:	0f 86 1a 00 00 00    	jbe    416ac6 <strcat@plt+0x158f6>
+  416aac:	8b 04 25 6c 11 f7 00 	mov    eax,DWORD PTR ds:0xf7116c
+  416ab3:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+  416ab7:	f2 0f 58 45 e8       	addsd  xmm0,QWORD PTR [rbp-0x18]
+  416abc:	f2 0f 11 45 e8       	movsd  QWORD PTR [rbp-0x18],xmm0
+  416ac1:	e9 7b 00 00 00       	jmp    416b41 <strcat@plt+0x15971>
+  416ac6:	f2 0f 10 05 d2 3a 00 	movsd  xmm0,QWORD PTR [rip+0x3ad2]        # 41a5a0 <strcat@plt+0x193d0>
+  416acd:	00
+  416ace:	f2 0f 10 0d 0a 49 00 	movsd  xmm1,QWORD PTR [rip+0x490a]        # 41b3e0 <strcat@plt+0x1a210>
+  416ad5:	00
+  416ad6:	f2 0f 10 15 12 49 00 	movsd  xmm2,QWORD PTR [rip+0x4912]        # 41b3f0 <strcat@plt+0x1a220>
+  416add:	00
+  416ade:	8b 04 25 70 11 f7 00 	mov    eax,DWORD PTR ds:0xf71170
+  416ae5:	f2 0f 2a d8          	cvtsi2sd xmm3,eax
+  416ae9:	f2 0f 5c 5d e8       	subsd  xmm3,QWORD PTR [rbp-0x18]
+  416aee:	8b 04 25 6c 11 f7 00 	mov    eax,DWORD PTR ds:0xf7116c
+  416af5:	f2 0f 2a e0          	cvtsi2sd xmm4,eax
+  416af9:	f2 0f 59 e2          	mulsd  xmm4,xmm2
+  416afd:	f2 0f 5e e1          	divsd  xmm4,xmm1
+  416b01:	f2 0f 5c dc          	subsd  xmm3,xmm4
+  416b05:	66 0f 2e d8          	ucomisd xmm3,xmm0
+  416b09:	0f 86 2d 00 00 00    	jbe    416b3c <strcat@plt+0x1596c>
+  416b0f:	f2 0f 10 05 c9 48 00 	movsd  xmm0,QWORD PTR [rip+0x48c9]        # 41b3e0 <strcat@plt+0x1a210>
+  416b16:	00
+  416b17:	f2 0f 10 0d d1 48 00 	movsd  xmm1,QWORD PTR [rip+0x48d1]        # 41b3f0 <strcat@plt+0x1a220>
+  416b1e:	00
+  416b1f:	8b 04 25 6c 11 f7 00 	mov    eax,DWORD PTR ds:0xf7116c
+  416b26:	f2 0f 2a d0          	cvtsi2sd xmm2,eax
+  416b2a:	f2 0f 59 d1          	mulsd  xmm2,xmm1
+  416b2e:	f2 0f 5e d0          	divsd  xmm2,xmm0
+  416b32:	f2 0f 58 55 e8       	addsd  xmm2,QWORD PTR [rbp-0x18]
+  416b37:	f2 0f 11 55 e8       	movsd  QWORD PTR [rbp-0x18],xmm2
+  416b3c:	e9 00 00 00 00       	jmp    416b41 <strcat@plt+0x15971>
+  416b41:	e9 00 00 00 00       	jmp    416b46 <strcat@plt+0x15976>
+  416b46:	e9 41 01 00 00       	jmp    416c8c <strcat@plt+0x15abc>
+  416b4b:	f2 0f 10 05 bd 46 00 	movsd  xmm0,QWORD PTR [rip+0x46bd]        # 41b210 <strcat@plt+0x1a040>
+  416b52:	00
+  416b53:	8b 04 25 60 11 f7 00 	mov    eax,DWORD PTR ds:0xf71160
+  416b5a:	f2 0f 2a c8          	cvtsi2sd xmm1,eax
+  416b5e:	f2 0f 58 c8          	addsd  xmm1,xmm0
+  416b62:	f2 0f 11 4d d8       	movsd  QWORD PTR [rbp-0x28],xmm1
+  416b67:	f2 0f 10 45 d8       	movsd  xmm0,QWORD PTR [rbp-0x28]
+  416b6c:	66 0f 2e 45 e0       	ucomisd xmm0,QWORD PTR [rbp-0x20]
+  416b71:	0f 86 12 00 00 00    	jbe    416b89 <strcat@plt+0x159b9>
+  416b77:	f2 0f 10 05 91 46 00 	movsd  xmm0,QWORD PTR [rip+0x4691]        # 41b210 <strcat@plt+0x1a040>
+  416b7e:	00
+  416b7f:	f2 0f 58 45 e0       	addsd  xmm0,QWORD PTR [rbp-0x20]
+  416b84:	f2 0f 11 45 d8       	movsd  QWORD PTR [rbp-0x28],xmm0
+  416b89:	83 3c 25 94 de f6 00 	cmp    DWORD PTR ds:0xf6de94,0x0
+  416b90:	00
+  416b91:	0f 85 49 00 00 00    	jne    416be0 <strcat@plt+0x15a10>
+  416b97:	f2 0f 10 05 01 3a 00 	movsd  xmm0,QWORD PTR [rip+0x3a01]        # 41a5a0 <strcat@plt+0x193d0>
+  416b9e:	00
+  416b9f:	8b 04 25 70 11 f7 00 	mov    eax,DWORD PTR ds:0xf71170
+  416ba6:	f2 0f 2a c8          	cvtsi2sd xmm1,eax
+  416baa:	f2 0f 5c c8          	subsd  xmm1,xmm0
+  416bae:	f2 0f 10 45 d8       	movsd  xmm0,QWORD PTR [rbp-0x28]
+  416bb3:	8b 04 25 84 11 f7 00 	mov    eax,DWORD PTR ds:0xf71184
+  416bba:	99                   	cdq
+  416bbb:	b9 02 00 00 00       	mov    ecx,0x2
+  416bc0:	f7 f9                	idiv   ecx
+  416bc2:	99                   	cdq
+  416bc3:	f7 3c 25 60 11 f7 00 	idiv   DWORD PTR ds:0xf71160
+  416bca:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+  416bce:	f2 0f 5c c2          	subsd  xmm0,xmm2
+  416bd2:	f2 0f 5e c8          	divsd  xmm1,xmm0
+  416bd6:	f2 0f 11 4d e8       	movsd  QWORD PTR [rbp-0x18],xmm1
+  416bdb:	e9 21 00 00 00       	jmp    416c01 <strcat@plt+0x15a31>
+  416be0:	f2 0f 10 05 b8 39 00 	movsd  xmm0,QWORD PTR [rip+0x39b8]        # 41a5a0 <strcat@plt+0x193d0>
+  416be7:	00
+  416be8:	8b 04 25 70 11 f7 00 	mov    eax,DWORD PTR ds:0xf71170
+  416bef:	f2 0f 2a c8          	cvtsi2sd xmm1,eax
+  416bf3:	f2 0f 5c c8          	subsd  xmm1,xmm0
+  416bf7:	f2 0f 5e 4d d8       	divsd  xmm1,QWORD PTR [rbp-0x28]
+  416bfc:	f2 0f 11 4d e8       	movsd  QWORD PTR [rbp-0x18],xmm1
+  416c01:	83 3c 25 88 de f6 00 	cmp    DWORD PTR ds:0xf6de88,0x0
+  416c08:	00
+  416c09:	0f 84 3c 00 00 00    	je     416c4b <strcat@plt+0x15a7b>
+  416c0f:	f2 0f 10 05 f1 45 00 	movsd  xmm0,QWORD PTR [rip+0x45f1]        # 41b208 <strcat@plt+0x1a038>
+  416c16:	00
+  416c17:	f2 0f 59 45 e8       	mulsd  xmm0,QWORD PTR [rbp-0x18]
+  416c1c:	8b 04 25 70 11 f7 00 	mov    eax,DWORD PTR ds:0xf71170
+  416c23:	83 e8 64             	sub    eax,0x64
+  416c26:	f2 0f 2a c8          	cvtsi2sd xmm1,eax
+  416c2a:	66 0f 2e c8          	ucomisd xmm1,xmm0
+  416c2e:	0f 86 12 00 00 00    	jbe    416c46 <strcat@plt+0x15a76>
+  416c34:	f2 0f 10 05 cc 45 00 	movsd  xmm0,QWORD PTR [rip+0x45cc]        # 41b208 <strcat@plt+0x1a038>
+  416c3b:	00
+  416c3c:	f2 0f 59 45 e8       	mulsd  xmm0,QWORD PTR [rbp-0x18]
+  416c41:	f2 0f 11 45 e8       	movsd  QWORD PTR [rbp-0x18],xmm0
+  416c46:	e9 3c 00 00 00       	jmp    416c87 <strcat@plt+0x15ab7>
+  416c4b:	f2 0f 10 05 ad 47 00 	movsd  xmm0,QWORD PTR [rip+0x47ad]        # 41b400 <strcat@plt+0x1a230>
+  416c52:	00
+  416c53:	f2 0f 59 45 e8       	mulsd  xmm0,QWORD PTR [rbp-0x18]
+  416c58:	8b 04 25 70 11 f7 00 	mov    eax,DWORD PTR ds:0xf71170
+  416c5f:	83 e8 64             	sub    eax,0x64
+  416c62:	f2 0f 2a c8          	cvtsi2sd xmm1,eax
+  416c66:	66 0f 2e c8          	ucomisd xmm1,xmm0
+  416c6a:	0f 86 12 00 00 00    	jbe    416c82 <strcat@plt+0x15ab2>
+  416c70:	f2 0f 10 05 88 47 00 	movsd  xmm0,QWORD PTR [rip+0x4788]        # 41b400 <strcat@plt+0x1a230>
+  416c77:	00
+  416c78:	f2 0f 59 45 e8       	mulsd  xmm0,QWORD PTR [rbp-0x18]
+  416c7d:	f2 0f 11 45 e8       	movsd  QWORD PTR [rbp-0x18],xmm0
+  416c82:	e9 00 00 00 00       	jmp    416c87 <strcat@plt+0x15ab7>
+  416c87:	e9 00 00 00 00       	jmp    416c8c <strcat@plt+0x15abc>
+  416c8c:	f2 0f 2c 45 e8       	cvttsd2si eax,QWORD PTR [rbp-0x18]
+  416c91:	5d                   	pop    rbp
+  416c92:	c3                   	ret
+  416c93:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+  416c9a:	00 00 00
+  416c9d:	0f 1f 00             	nop    DWORD PTR [rax]

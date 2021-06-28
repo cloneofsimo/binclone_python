@@ -1,0 +1,12 @@
+  403740:	89 f0                	mov    eax,esi
+  403742:	83 e0 07             	and    eax,0x7
+  403745:	83 e6 f8             	and    esi,0xfffffff8
+  403748:	8d 4e 01             	lea    ecx,[rsi+0x1]
+  40374b:	48 d3 ef             	shr    rdi,cl
+  40374e:	83 e7 3f             	and    edi,0x3f
+  403751:	0f b6 84 f8 00 ad 41 	movzx  eax,BYTE PTR [rax+rdi*8+0x41ad00]
+  403758:	00
+  403759:	89 f1                	mov    ecx,esi
+  40375b:	48 d3 e0             	shl    rax,cl
+  40375e:	c3                   	ret
+  40375f:	90                   	nop

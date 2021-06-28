@@ -1,0 +1,27 @@
+    18be:	f3 0f 1e fa          	endbr64
+    18c2:	4c 8b 87 70 02 00 00 	mov    r8,QWORD PTR [rdi+0x270]
+    18c9:	48 89 f0             	mov    rax,rsi
+    18cc:	48 99                	cqo
+    18ce:	49 f7 f8             	idiv   r8
+    18d1:	48 8b 87 78 02 00 00 	mov    rax,QWORD PTR [rdi+0x278]
+    18d8:	48 39 d0             	cmp    rax,rdx
+    18db:	7d 26                	jge    1903 <__sprintf_chk@plt+0x6b3>
+    18dd:	48 8b 8f 80 02 00 00 	mov    rcx,QWORD PTR [rdi+0x280]
+    18e4:	48 29 c2             	sub    rdx,rax
+    18e7:	48 8d 79 ff          	lea    rdi,[rcx-0x1]
+    18eb:	48 0f af d7          	imul   rdx,rdi
+    18ef:	48 0f af c1          	imul   rax,rcx
+    18f3:	48 8d 0c 02          	lea    rcx,[rdx+rax*1]
+    18f7:	48 89 f0             	mov    rax,rsi
+    18fa:	48 99                	cqo
+    18fc:	49 f7 f8             	idiv   r8
+    18ff:	48 01 c8             	add    rax,rcx
+    1902:	c3                   	ret
+    1903:	48 89 d1             	mov    rcx,rdx
+    1906:	48 0f af 8f 80 02 00 	imul   rcx,QWORD PTR [rdi+0x280]
+    190d:	00
+    190e:	48 89 f0             	mov    rax,rsi
+    1911:	48 99                	cqo
+    1913:	49 f7 f8             	idiv   r8
+    1916:	48 01 c8             	add    rax,rcx
+    1919:	c3                   	ret    

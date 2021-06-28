@@ -1,0 +1,37 @@
+  4032f0:	55                   	push   rbp
+  4032f1:	48 89 e5             	mov    rbp,rsp
+  4032f4:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  4032f8:	89 75 f4             	mov    DWORD PTR [rbp-0xc],esi
+  4032fb:	8b 75 f4             	mov    esi,DWORD PTR [rbp-0xc]
+  4032fe:	83 e6 07             	and    esi,0x7
+  403301:	89 75 f0             	mov    DWORD PTR [rbp-0x10],esi
+  403304:	8b 75 f4             	mov    esi,DWORD PTR [rbp-0xc]
+  403307:	83 e6 f8             	and    esi,0xfffffff8
+  40330a:	89 75 ec             	mov    DWORD PTR [rbp-0x14],esi
+  40330d:	48 8b 7d f8          	mov    rdi,QWORD PTR [rbp-0x8]
+  403311:	8b 75 ec             	mov    esi,DWORD PTR [rbp-0x14]
+  403314:	83 c6 01             	add    esi,0x1
+  403317:	89 f6                	mov    esi,esi
+  403319:	89 f1                	mov    ecx,esi
+  40331b:	48 d3 ef             	shr    rdi,cl
+  40331e:	89 fe                	mov    esi,edi
+  403320:	83 e6 3f             	and    esi,0x3f
+  403323:	89 75 e8             	mov    DWORD PTR [rbp-0x18],esi
+  403326:	8b 75 e8             	mov    esi,DWORD PTR [rbp-0x18]
+  403329:	89 f7                	mov    edi,esi
+  40332b:	48 c1 e7 03          	shl    rdi,0x3
+  40332f:	48 b8 20 1d 42 00 00 	movabs rax,0x421d20
+  403336:	00 00 00
+  403339:	48 01 f8             	add    rax,rdi
+  40333c:	8b 75 f0             	mov    esi,DWORD PTR [rbp-0x10]
+  40333f:	89 f7                	mov    edi,esi
+  403341:	0f b6 34 38          	movzx  esi,BYTE PTR [rax+rdi*1]
+  403345:	89 f0                	mov    eax,esi
+  403347:	8b 75 ec             	mov    esi,DWORD PTR [rbp-0x14]
+  40334a:	89 f1                	mov    ecx,esi
+  40334c:	48 d3 e0             	shl    rax,cl
+  40334f:	5d                   	pop    rbp
+  403350:	c3                   	ret
+  403351:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+  403358:	00 00 00
+  40335b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]

@@ -1,0 +1,81 @@
+  406a10:	55                   	push   rbp
+  406a11:	48 89 e5             	mov    rbp,rsp
+  406a14:	48 83 ec 20          	sub    rsp,0x20
+  406a18:	b8 08 00 00 00       	mov    eax,0x8
+  406a1d:	89 c6                	mov    esi,eax
+  406a1f:	48 89 7d f8          	mov    QWORD PTR [rbp-0x8],rdi
+  406a23:	c7 45 f0 01 00 00 00 	mov    DWORD PTR [rbp-0x10],0x1
+  406a2a:	48 63 7d f0          	movsxd rdi,DWORD PTR [rbp-0x10]
+  406a2e:	e8 5d a6 ff ff       	call   401090 <calloc@plt>
+  406a33:	b9 08 00 00 00       	mov    ecx,0x8
+  406a38:	89 ce                	mov    esi,ecx
+  406a3a:	48 89 04 25 00 a1 40 	mov    QWORD PTR ds:0x40a100,rax
+  406a41:	00
+  406a42:	48 63 7d f0          	movsxd rdi,DWORD PTR [rbp-0x10]
+  406a46:	e8 45 a6 ff ff       	call   401090 <calloc@plt>
+  406a4b:	b9 08 00 00 00       	mov    ecx,0x8
+  406a50:	89 ce                	mov    esi,ecx
+  406a52:	48 89 04 25 20 a1 40 	mov    QWORD PTR ds:0x40a120,rax
+  406a59:	00
+  406a5a:	48 63 7d f0          	movsxd rdi,DWORD PTR [rbp-0x10]
+  406a5e:	e8 2d a6 ff ff       	call   401090 <calloc@plt>
+  406a63:	b9 20 00 00 00       	mov    ecx,0x20
+  406a68:	89 ce                	mov    esi,ecx
+  406a6a:	48 89 04 25 08 a1 40 	mov    QWORD PTR ds:0x40a108,rax
+  406a71:	00
+  406a72:	8b 4d f0             	mov    ecx,DWORD PTR [rbp-0x10]
+  406a75:	b8 a0 0f 00 00       	mov    eax,0xfa0
+  406a7a:	99                   	cdq
+  406a7b:	f7 7d f0             	idiv   DWORD PTR [rbp-0x10]
+  406a7e:	83 c0 3c             	add    eax,0x3c
+  406a81:	05 c8 00 00 00       	add    eax,0xc8
+  406a86:	83 c0 01             	add    eax,0x1
+  406a89:	0f af c8             	imul   ecx,eax
+  406a8c:	48 63 f9             	movsxd rdi,ecx
+  406a8f:	e8 fc a5 ff ff       	call   401090 <calloc@plt>
+  406a94:	48 89 04 25 10 a1 40 	mov    QWORD PTR ds:0x40a110,rax
+  406a9b:	00
+  406a9c:	48 8b 7d f8          	mov    rdi,QWORD PTR [rbp-0x8]
+  406aa0:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  406aa4:	48 8b b0 38 02 00 00 	mov    rsi,QWORD PTR [rax+0x238]
+  406aab:	e8 a0 00 00 00       	call   406b50 <exit@plt+0x5a20>
+  406ab0:	c7 45 f4 00 00 00 00 	mov    DWORD PTR [rbp-0xc],0x0
+  406ab7:	83 7d f4 00          	cmp    DWORD PTR [rbp-0xc],0x0
+  406abb:	0f 85 11 00 00 00    	jne    406ad2 <exit@plt+0x59a2>
+  406ac1:	48 8b 7d f8          	mov    rdi,QWORD PTR [rbp-0x8]
+  406ac5:	8b 75 f0             	mov    esi,DWORD PTR [rbp-0x10]
+  406ac8:	e8 93 f9 ff ff       	call   406460 <exit@plt+0x5330>
+  406acd:	e9 0f 00 00 00       	jmp    406ae1 <exit@plt+0x59b1>
+  406ad2:	48 8b 7d f8          	mov    rdi,QWORD PTR [rbp-0x8]
+  406ad6:	8b 75 f4             	mov    esi,DWORD PTR [rbp-0xc]
+  406ad9:	8b 55 f0             	mov    edx,DWORD PTR [rbp-0x10]
+  406adc:	e8 4f f7 ff ff       	call   406230 <exit@plt+0x5100>
+  406ae1:	48 8b 7d f8          	mov    rdi,QWORD PTR [rbp-0x8]
+  406ae5:	e8 86 b2 ff ff       	call   401d70 <exit@plt+0xc40>
+  406aea:	48 8b 7d f8          	mov    rdi,QWORD PTR [rbp-0x8]
+  406aee:	48 89 45 e8          	mov    QWORD PTR [rbp-0x18],rax
+  406af2:	e8 49 b4 ff ff       	call   401f40 <exit@plt+0xe10>
+  406af7:	48 c7 04 25 18 a1 40 	mov    QWORD PTR ds:0x40a118,0x0
+  406afe:	00 00 00 00 00
+  406b03:	48 8b 3c 25 00 a1 40 	mov    rdi,QWORD PTR ds:0x40a100
+  406b0a:	00
+  406b0b:	48 89 45 e0          	mov    QWORD PTR [rbp-0x20],rax
+  406b0f:	e8 1c a5 ff ff       	call   401030 <free@plt>
+  406b14:	48 8b 04 25 20 a1 40 	mov    rax,QWORD PTR ds:0x40a120
+  406b1b:	00
+  406b1c:	48 89 c7             	mov    rdi,rax
+  406b1f:	e8 0c a5 ff ff       	call   401030 <free@plt>
+  406b24:	48 8b 04 25 08 a1 40 	mov    rax,QWORD PTR ds:0x40a108
+  406b2b:	00
+  406b2c:	48 89 c7             	mov    rdi,rax
+  406b2f:	e8 fc a4 ff ff       	call   401030 <free@plt>
+  406b34:	48 8b 04 25 10 a1 40 	mov    rax,QWORD PTR ds:0x40a110
+  406b3b:	00
+  406b3c:	48 89 c7             	mov    rdi,rax
+  406b3f:	e8 ec a4 ff ff       	call   401030 <free@plt>
+  406b44:	31 c9                	xor    ecx,ecx
+  406b46:	89 c8                	mov    eax,ecx
+  406b48:	48 83 c4 20          	add    rsp,0x20
+  406b4c:	5d                   	pop    rbp
+  406b4d:	c3                   	ret
+  406b4e:	66 90                	xchg   ax,ax
