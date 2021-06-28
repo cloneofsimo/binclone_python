@@ -1,5 +1,12 @@
 {
-    "REGGEN" : ["eax", "ebx", "ecx", "edx"],
-    "REGSEG" : ["cs", "ds", "es", "fs", "gs"],
-    "REGIdxPtr" : ["esi", "edi", "ebp", "esp"]
+    "REGSEG": [
+        "cs",
+        "ds",
+        "es",
+        "fs",
+        "gs"
+    ],
+    "hi" : [
+        "hi"
+    ]
 }
